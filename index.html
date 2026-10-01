@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#2c3e2d">
 <title>Real de Cote · Aceite de Oliva Virgen Extra de Montellano, Sevilla</title>
 <meta name="description" content="Real de Cote AOVE — aceite de oliva virgen extra premium del Cortijo Cote, Montellano (Sevilla). Coupage, Manzanilla, Arbequina, Hojiblanca y BIO ecológico. Producción propia. Exportación mundial.">
 <meta name="keywords" content="aceite de oliva virgen extra, AOVE, Montellano, Sevilla, Cortijo Cote, Manzanilla, Arbequina, Hojiblanca, Coupage, BIO ecológico, exportación aceite, olive oil Spain, extra virgin olive oil">
@@ -37,8 +37,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="/assets/video/olivo-desktop.jpg" media="(min-aspect-ratio: 1/1)">
 <link rel="preload" as="image" href="/assets/video/olivo-mobile.jpg" media="(max-aspect-ratio: 1/1)">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/styles.css?v=olivo-1">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=switzer@300,400,500,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/styles.css?v=olivo-5">
 <script>document.documentElement.classList.add("js");try{if(sessionStorage.getItem("rdc-curtain"))document.documentElement.classList.add("no-curtain");sessionStorage.setItem("rdc-curtain","1")}catch(e){}</script>
 
 <script type="application/ld+json">
@@ -156,18 +159,19 @@
   <nav class="nav__links" aria-label="Principal">
     <a class="nav__link" href="#coleccion" data-i18n="nav.collection">Colección</a>
     <a class="nav__link" href="#cortijo" data-i18n="nav.estate">El cortijo</a>
-    <a class="nav__link" href="#profesionales" data-i18n="nav.trade">Profesionales</a>
   </nav>
   <a class="nav__brand" href="#top" aria-label="Real de Cote — inicio">
-    <img src="/assets/img/wordmark-green.png" width="460" height="79" alt="Real de Cote">
+    <img class="nav__crest" src="/assets/img/crest-ivory.png" width="249" height="255" alt="">
+    <img class="nav__word" src="/assets/img/wordmark-ivory.png" width="460" height="79" alt="Real de Cote">
   </a>
   <div class="nav__actions">
+    <a class="nav__link" href="#profesionales" data-i18n="nav.trade">Profesionales</a>
+    <a class="nav__link" href="#contacto" data-i18n="nav.contact">Contacto</a>
     <div class="lang" role="group" aria-label="Idioma / Language">
       <button type="button" data-lang="es" class="active" aria-pressed="true">ES</button>
       <span class="sep" aria-hidden="true">·</span>
       <button type="button" data-lang="en" aria-pressed="false">EN</button>
     </div>
-    <a class="nav__pill" href="#contacto" data-i18n="nav.contact">Contacto</a>
     <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
       <span></span><span></span>
     </button>
@@ -198,16 +202,21 @@
 <!-- ===================== 1 · HERO (video) ===================== -->
 <section class="slide hero" id="top" aria-labelledby="hero-title">
   <div class="slide__inner">
+    <div class="hero__type">
+      <h1 class="hero__title" id="hero-title"><span data-i18n="hero.t1">Aceite de oliva</span> <span data-i18n="hero.t2">virgen extra</span></h1>
+      <p class="hero__ghost" aria-hidden="true"><span data-i18n="hero.t2">virgen extra</span><span data-i18n="hero.t2">virgen extra</span></p>
+      <p class="hero__script script" data-i18n="hero.script">de nuestro olivar</p>
+    </div>
     <video class="hero__video" id="heroVideo" muted loop playsinline preload="none" aria-hidden="true"
            data-desktop="/assets/video/olivo-desktop.mp4" data-mobile="/assets/video/olivo-mobile.mp4"
            data-poster-desktop="/assets/video/olivo-desktop.jpg" data-poster-mobile="/assets/video/olivo-mobile.jpg"></video>
-    <div class="hero__text">
-      <h1 class="hero__title" id="hero-title"><span data-i18n="hero.t1">Aceite de oliva virgen extra,</span> <em data-i18n="hero.t2">de nuestro olivar.</em></h1>
-      <p class="hero__sub" data-i18n="hero.sub">Cinco aceites de cosecha temprana del Cortijo Cote · Montellano, Sevilla</p>
-      <div class="btn-row">
-        <a class="btn btn--solid" href="#coleccion" data-i18n="hero.cta1">Descubrir la colección</a>
-        <a class="btn btn--line" href="#profesionales" data-i18n="hero.cta2">Profesionales</a>
-      </div>
+    <div class="hero__side hero__side--l">
+      <p data-i18n="hero.noteL">Cinco aceites de cosecha temprana del Cortijo Cote</p>
+      <a class="btn btn--solid" href="#coleccion" data-i18n="hero.cta1">Descubrir la colección</a>
+    </div>
+    <div class="hero__side hero__side--r">
+      <p data-i18n="hero.noteR">Montellano, Sevilla. A 250 metros de altitud</p>
+      <a class="btn btn--line" href="#profesionales" data-i18n="hero.cta2">Profesionales</a>
     </div>
     <button class="hero__toggle" id="videoToggle" type="button" aria-label="Pausar vídeo" hidden>
       <svg class="i-pause" viewBox="0 0 24 24" width="12" height="12" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>
@@ -220,8 +229,9 @@
 <section class="slide manifesto" aria-labelledby="man-title">
   <div class="slide__inner">
     <img class="manifesto__crest" src="/assets/img/crest-green.png" width="249" height="255" alt="" aria-hidden="true">
-    <p class="label" id="man-title" data-i18n="man.label">Herencia y distinción</p>
+    <h2 class="h2" id="man-title" data-i18n="man.label">Herencia y distinción</h2>
     <p class="manifesto__text" data-words data-i18n="man.text">En la campiña de Montellano, a 250 metros sobre Sevilla, criamos un aceite con paciencia, oficio y respeto por el olivar.</p>
+    <p class="script manifesto__sign" data-i18n="man.sign">Cortijo Cote, Montellano</p>
   </div>
 </section>
 
@@ -229,37 +239,40 @@
 <section class="slide collection" id="coleccion" aria-labelledby="col-title">
   <div class="slide__inner">
     <div class="container">
-      <div class="sec-head">
-        <h2 class="h2" id="col-title" data-i18n="col.title">La colección</h2>
-        <p class="muted" data-i18n="col.intro">Cinco aceites de cosecha temprana. Cada uno, en 500 ml y 250 ml.</p>
+      <div class="vhead">
+        <div>
+          <h2 class="h2" id="col-title" data-i18n="col.title">La colección</h2>
+          <p class="script" data-i18n="col.script">cinco aceites, un mismo origen</p>
+        </div>
+        <p class="lead" data-i18n="col.intro">Cinco aceites de cosecha temprana. Cada uno, en 500 ml y 250 ml.</p>
       </div>
       <div class="cards">
         <article class="card">
-          <div class="card__ph"><img src="/assets/img/olivo-coupage.webp" width="238" height="900" loading="lazy" decoding="async" alt="Botella de Real de Cote Coupage"></div>
+          <div class="card__ph"><span class="card__no" aria-hidden="true">01</span><img src="/assets/img/olivo-coupage.webp" width="238" height="900" loading="lazy" decoding="async" alt="Botella de Real de Cote Coupage"></div>
           <h3 class="card__name">Coupage</h3>
           <p class="card__line" data-i18n="p.coup.line">El clásico de la casa. Suave y redondo.</p>
           <div class="card__foot"><span class="dots" style="--lv:2" title="Intensidad suave"></span><a class="card__cta" href="#contacto" data-amazon="coupage"><span data-i18n="p.more">Consultar</span></a></div>
         </article>
         <article class="card">
-          <div class="card__ph"><img src="/assets/img/olivo-manzanilla.webp" width="238" height="900" loading="lazy" decoding="async" alt="Botella de Real de Cote Manzanilla"></div>
+          <div class="card__ph"><span class="card__no" aria-hidden="true">02</span><img src="/assets/img/olivo-manzanilla.webp" width="238" height="900" loading="lazy" decoding="async" alt="Botella de Real de Cote Manzanilla"></div>
           <h3 class="card__name">Manzanilla</h3>
           <p class="card__line" data-i18n="p.manz.line">La aceituna de Sevilla. Almendra verde y manzana.</p>
           <div class="card__foot"><span class="dots" style="--lv:2" title="Intensidad suave"></span><a class="card__cta" href="#contacto" data-amazon="manzanilla"><span data-i18n="p.more">Consultar</span></a></div>
         </article>
         <article class="card">
-          <div class="card__ph"><img src="/assets/img/olivo-arbequina.webp" width="240" height="900" loading="lazy" decoding="async" alt="Botella de Real de Cote Arbequina"></div>
+          <div class="card__ph"><span class="card__no" aria-hidden="true">03</span><img src="/assets/img/olivo-arbequina.webp" width="240" height="900" loading="lazy" decoding="async" alt="Botella de Real de Cote Arbequina"></div>
           <h3 class="card__name">Arbequina</h3>
           <p class="card__line" data-i18n="p.arb.line">Frutada y delicada. Manzana y plátano maduro.</p>
           <div class="card__foot"><span class="dots" style="--lv:1" title="Intensidad delicada"></span><a class="card__cta" href="#contacto" data-amazon="arbequina"><span data-i18n="p.more">Consultar</span></a></div>
         </article>
         <article class="card">
-          <div class="card__ph"><img src="/assets/img/olivo-hojiblanca.webp" width="238" height="900" loading="lazy" decoding="async" alt="Botella de Real de Cote Hojiblanca"></div>
+          <div class="card__ph"><span class="card__no" aria-hidden="true">04</span><img src="/assets/img/olivo-hojiblanca.webp" width="238" height="900" loading="lazy" decoding="async" alt="Botella de Real de Cote Hojiblanca"></div>
           <h3 class="card__name">Hojiblanca</h3>
           <p class="card__line" data-i18n="p.hoji.line">Cuerpo y estabilidad. Amargo y picante equilibrados.</p>
           <div class="card__foot"><span class="dots" style="--lv:3" title="Intensidad media"></span><a class="card__cta" href="#contacto" data-amazon="hojiblanca"><span data-i18n="p.more">Consultar</span></a></div>
         </article>
         <article class="card">
-          <div class="card__ph"><img src="/assets/img/olivo-bio.webp" width="238" height="900" loading="lazy" decoding="async" alt="Botella de Real de Cote BIO, ecológico"></div>
+          <div class="card__ph"><span class="card__no" aria-hidden="true">05</span><img src="/assets/img/olivo-bio.webp" width="238" height="900" loading="lazy" decoding="async" alt="Botella de Real de Cote BIO, ecológico"></div>
           <h3 class="card__name">BIO</h3>
           <p class="card__line" data-i18n="p.bio.line">Ecológico y sin filtrar. Denso e intenso.</p>
           <div class="card__foot"><span class="dots" style="--lv:4" title="Intensidad intensa"></span><a class="card__cta" href="#contacto" data-amazon="bio"><span data-i18n="p.more">Consultar</span></a></div>
@@ -279,7 +292,8 @@
     <div class="estate__tx">
       <p class="label" data-i18n="est.label">El cortijo</p>
       <h2 class="h2" id="est-title" data-i18n="est.title">Montellano, Sierra Sur de Sevilla</h2>
-      <p data-i18n="est.p">Olivares a 250 metros de altitud bajo la silueta del castillo de Cote, a 66 km de Sevilla. Aquí nace cada botella.</p>
+      <p class="script" data-i18n="est.script">donde nace cada botella</p>
+      <p class="lead" data-i18n="est.p">Olivares a 250 metros de altitud bajo la silueta del castillo de Cote, a 66 km de Sevilla.</p>
       <ul class="facts">
         <li><b>250 m</b><span data-i18n="stat.alt">altitud</span></li>
         <li><b>5</b><span data-i18n="stat.var">aceites</span></li>
@@ -299,6 +313,7 @@
     <div class="craft__tx">
       <p class="label" data-i18n="craft.label">El oficio</p>
       <h2 class="h2" id="craft-title" data-i18n="craft.title">Cosecha temprana, extracción en frío</h2>
+      <p class="script" data-i18n="craft.script">del olivar a la botella</p>
       <ol class="steps">
         <li><span>01</span><span data-i18n="proc.s1">Recogemos la aceituna en su punto óptimo</span></li>
         <li><span>02</span><span data-i18n="proc.s2">Molturamos en frío, en pocas horas</span></li>
@@ -339,7 +354,8 @@
       <div class="trade__info">
         <p class="label" data-i18n="exp.eyebrow">Profesionales y exportación</p>
         <h2 class="h2" id="exp-title" data-i18n="exp.title">Andalucía, a cualquier mercado del mundo</h2>
-        <p class="muted" data-i18n="exp.intro">Distribución, hostelería, tiendas gourmet y marca blanca. Le enviamos catálogo, tarifa 2026 y muestras.</p>
+        <p class="script" data-i18n="exp.script">hablemos</p>
+        <p class="lead" data-i18n="exp.intro">Distribución, hostelería, tiendas gourmet y marca blanca. Le enviamos catálogo, tarifa 2026 y muestras.</p>
         <dl class="terms">
           <div><dt data-i18n="exp.c1t">Envío</dt><dd data-i18n="exp.c1p">Mundial, EXW Sevilla</dd></div>
           <div><dt data-i18n="exp.c2t">Pedido mínimo</dt><dd data-i18n="exp.c2p">1 palé por referencia</dd></div>
@@ -419,7 +435,7 @@
       </nav>
       <address class="footer__addr">Real de Cote AOVE, S.L.<br>Ctra. de Coripe, km 2,3 — Cortijo Cote<br>41770 Montellano, Sevilla</address>
     </div>
-    <p class="footer__giant" aria-hidden="true">Real de Cote</p>
+    <p class="footer__giant"><span data-i18n="foot.g1">Herencia</span> <span data-i18n="foot.g2">y distinción</span> <em class="script" data-i18n="foot.g3">en cada gota</em></p>
     <div class="footer__bottom">
       <span>© 2026 Real de Cote AOVE, S.L. · <span data-i18n="foot.rights">Todos los derechos reservados.</span></span>
       <span class="legal">
@@ -435,6 +451,6 @@
   <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.125.558 4.121 1.529 5.845L.057 23.571a.5.5 0 0 0 .614.612l5.857-1.53A11.943 11.943 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.882a9.875 9.875 0 0 1-5.031-1.377l-.36-.214-3.733.975.999-3.648-.235-.374A9.861 9.861 0 0 1 2.118 12C2.118 6.536 6.536 2.118 12 2.118c5.463 0 9.882 4.418 9.882 9.882 0 5.463-4.419 9.882-9.882 9.882z"/></svg>
 </a>
 
-<script src="/js/main.js?v=olivo-1" defer></script>
+<script src="/js/main.js?v=olivo-5" defer></script>
 </body>
 </html>

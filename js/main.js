@@ -36,14 +36,14 @@
     "skip":"Skip to content",
     "nav.collection":"Collection","nav.estate":"The estate","nav.trade":"Trade","nav.contact":"Contact",
 
-    "hero.t1":"Extra virgin olive oil,","hero.t2":"from our own grove.",
-    "hero.sub":"Five early-harvest oils from Cortijo Cote · Montellano, Seville",
+    "hero.t1":"Extra virgin","hero.t2":"olive oil","hero.script":"from our own grove",
+    "hero.noteL":"Five early-harvest oils from Cortijo Cote","hero.noteR":"Montellano, Seville. 250 metres above sea level",
     "hero.cta1":"Discover the collection","hero.cta2":"Trade",
 
-    "man.label":"Heritage & distinction",
+    "man.label":"Heritage & distinction","man.sign":"Cortijo Cote, Montellano",
     "man.text":"In the countryside of Montellano, 250 metres above Seville, we raise an oil with patience, craft and respect for the grove.",
 
-    "col.title":"The collection",
+    "col.title":"The collection","col.script":"five oils, one origin",
     "col.intro":"Five early-harvest oils. Each in 500 ml and 250 ml.",
     "p.more":"Enquire","p.buy":"Buy on Amazon","p.mono":"Single variety",
     "p.coup.tag":"Signature","p.coup.line":"The house classic. Smooth and rounded.",
@@ -54,8 +54,9 @@
     "p.int.delicate":"Delicate","p.int.soft":"Mild","p.int.medium":"Medium","p.int.intense":"Intense",
 
     "est.label":"The estate","est.title":"Montellano, in Seville's southern hills",
-    "est.p":"Groves 250 metres above sea level beneath the silhouette of Cote castle, 66 km from Seville. Every bottle is born here.",
-    "craft.label":"The craft","craft.title":"Early harvest, cold extraction",
+    "est.script":"where every bottle is born",
+    "est.p":"Groves 250 metres above sea level beneath the silhouette of Cote castle, 66 km from Seville.",
+    "craft.label":"The craft","craft.title":"Early harvest, cold extraction","craft.script":"from grove to bottle",
     "proc.s1":"We pick the olives at their optimal ripeness","proc.s2":"Cold-milled within hours","proc.s3":"Bottled at origin",
 
     "qual.eyebrow":"Certified quality","qual.title":"A guarantee in every bottle",
@@ -64,7 +65,7 @@
     "qual.c3t":"Cold extracted","qual.c3p":"Preserves aromas, polyphenols and flavour.",
     "stat.alt":"elevation","stat.var":"oils","stat.shelf":"months shelf life",
 
-    "exp.eyebrow":"Trade & export","exp.title":"Andalusia, to any market in the world",
+    "exp.eyebrow":"Trade & export","exp.script":"let's talk","exp.title":"Andalusia, to any market in the world",
     "exp.intro":"Distribution, hospitality, fine-food retail and private label. We'll send our catalogue, 2026 price list and samples.",
     "exp.c1t":"Shipping","exp.c1p":"Worldwide, EXW Seville",
     "exp.c2t":"Minimum order","exp.c2p":"1 pallet per reference",
@@ -79,6 +80,7 @@
     "con.f.phone":"Phone","con.f.message":"Message",
     "con.f.submit":"Send enquiry","con.f.note":"We reply within 24–48 working hours.",
 
+    "foot.g1":"Heritage","foot.g2":"& distinction","foot.g3":"in every drop",
     "foot.rights":"All rights reserved.","foot.legal":"Legal notice","foot.privacy":"Privacy","foot.cookies":"Cookies"
   };
 
@@ -179,7 +181,7 @@
   onScrollNav();
 
   var spyLinks = {};
-  $$(".nav__links .nav__link").forEach(function (l) { spyLinks[l.getAttribute("href").slice(1)] = l; });
+  $$(".nav .nav__link").forEach(function (l) { spyLinks[l.getAttribute("href").slice(1)] = l; });
   var spied = Object.keys(spyLinks).map(function (id) { return document.getElementById(id); }).filter(Boolean);
   if ("IntersectionObserver" in window && spied.length) {
     var spyObs = new IntersectionObserver(function (entries) {
