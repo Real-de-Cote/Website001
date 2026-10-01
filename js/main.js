@@ -29,79 +29,13 @@
   });
 
   /* ---------------------------------------------------------------
-     1. i18n  (Spanish is authored in the DOM; EN comes from here.
-        Missing keys gracefully fall back to the Spanish original.)
+     1. i18n — six languages from js/i18n.js (window.RDC_I18N).
+        Spanish is authored in the DOM; missing keys fall back to it.
+        First visit: the browser language if we have it, else Spanish.
   --------------------------------------------------------------- */
-  var EN = {
-    "skip":"Skip to content",
-    "nav.collection":"Collection","nav.estate":"The estate","nav.trade":"Trade","nav.contact":"Contact",
-
-    "hero.t1":"Extra virgin","hero.t2":"olive oil","hero.script":"from our own grove",
-    "hero.noteL":"Five early-harvest oils from Cortijo Cote","hero.noteR":"Montellano, Seville. 250 metres above sea level",
-    "hero.cta1":"Discover the collection","hero.cta2":"Trade",
-
-    "man.label":"Heritage & distinction","man.sign":"Cortijo Cote, Montellano",
-    "man.text":"In the countryside of Montellano, 250 metres above Seville, we raise an oil with patience, craft and respect for the grove.",
-
-    "col.title":"The collection","col.script":"five oils, one origin",
-    "col.intro":"Five early-harvest oils. Each in 500 ml and 250 ml.",
-    "p.more":"Enquire","p.buy":"Buy on Amazon","p.mono":"Single variety",
-    "p.coup.tag":"Signature","p.coup.line":"The house classic. Smooth and rounded.",
-    "p.manz.line":"Seville's own olive. Green almond and apple.",
-    "p.arb.line":"Fruity and delicate. Apple and ripe banana.",
-    "p.hoji.line":"Body and stability. Balanced bitterness and pungency.",
-    "p.bio.tag":"Organic","p.bio.line":"Organic and unfiltered. Dense and intense.",
-    "p.int.delicate":"Delicate","p.int.soft":"Mild","p.int.medium":"Medium","p.int.intense":"Intense",
-
-    "est.label":"The estate","est.title":"Montellano, in Seville's southern hills",
-    "est.script":"where every bottle is born",
-    "est.p":"Groves 250 metres above sea level beneath the silhouette of Cote castle, 66 km from Seville.",
-    "craft.label":"The craft","craft.title":"Early harvest, cold extraction","craft.script":"from grove to bottle",
-    "proc.s1":"We pick the olives at their optimal ripeness","proc.s2":"Cold-milled within hours","proc.s3":"Bottled at origin",
-
-    "qual.eyebrow":"Certified quality","qual.title":"A guarantee in every bottle",
-    "qual.c1t":"Extra virgin","qual.c1p":"The highest grade, obtained by physical means only.",
-    "qual.c2t":"Organic","qual.c2p":"Our BIO line comes from certified organic groves.",
-    "qual.c3t":"Cold extracted","qual.c3p":"Preserves aromas, polyphenols and flavour.",
-    "stat.alt":"elevation","stat.var":"oils","stat.shelf":"months shelf life",
-
-    "exp.eyebrow":"Trade & export","exp.script":"let's talk","exp.title":"Andalusia, to any market in the world",
-    "exp.intro":"Distribution, hospitality, fine-food retail and private label. We'll send our catalogue, 2026 price list and samples.",
-    "exp.c1t":"Shipping","exp.c1p":"Worldwide, EXW Seville",
-    "exp.c2t":"Minimum order","exp.c2p":"1 pallet per reference",
-    "exp.c3t":"Lead time","exp.c3p":"30–40 days",
-    "exp.c4t":"Private label","exp.c4p":"Made to measure",
-    "exp.c5t":"Also","exp.c5p":"Vinegars, pomace oil, 5 L jugs, Gordal olives",
-
-    "con.title":"Trade enquiry",
-    "con.f.name":"Name","con.f.company":"Company","con.f.country":"Country",
-    "con.f.interest":"Oils of interest","con.i.vinegar":"Vinegars","con.i.pomace":"Pomace","con.i.private":"Private label",
-    "con.f.volume":"Estimated volume","con.v.choose":"Select…","con.v1":"Less than 1 pallet","con.v2":"1–5 pallets","con.v3":"5–20 pallets","con.v4":"More than 20 pallets","con.v5":"Full container",
-    "con.f.phone":"Phone","con.f.message":"Message",
-    "con.f.submit":"Send enquiry","con.f.note":"We reply within 24–48 working hours.",
-
-    "foot.g1":"Heritage","foot.g2":"& distinction","foot.g3":"in every drop",
-    "foot.rights":"All rights reserved.","foot.legal":"Legal notice","foot.privacy":"Privacy","foot.cookies":"Cookies"
-  };
-
-  var META = {
-    es: { title:"Real de Cote · Aceite de Oliva Virgen Extra de Montellano, Sevilla",
-          desc:"Real de Cote — aceite de oliva virgen extra criado en el Cortijo Cote, Montellano (Sevilla)." },
-    en: { title:"Real de Cote · Extra Virgin Olive Oil from Montellano, Seville",
-          desc:"Real de Cote — extra virgin olive oil raised at Cortijo Cote, Montellano (Seville)." }
-  };
-  var STATUS = {
-    es:{
-      sending:"Enviando su consulta…",
-      ok:"Gracias. Hemos recibido su consulta y le responderemos en 24–48 h laborables.",
-      error:"No se ha podido enviar la consulta. Inténtelo de nuevo o escríbanos a info@realdecote.es."
-    },
-    en:{
-      sending:"Sending your enquiry…",
-      ok:"Thank you. We've received your enquiry and will reply within 24–48 working hours.",
-      error:"We couldn't send your enquiry. Please try again or email info@realdecote.es."
-    }
-  };
+  var I18N = window.RDC_I18N || { langs: ["es"], meta: {}, status: {}, t: {} };
+  var LANGS = I18N.langs;
+  var currentLang = "es";
 
   // cache the Spanish originals so we can switch back
   var nodes = $$("[data-i18n]").map(function (el) {
@@ -117,27 +51,74 @@
     updateWords();
   }
 
+  /* Giant hero words: shrink the type if a long translation would overflow */
+  var heroType = $(".hero__type");
+  function fitHero() {
+    if (!heroType) return;
+    heroType.style.fontSize = "";
+    var lines = $$(".hero__title span, .hero__ghost span", heroType).filter(function (l) { return l.offsetParent; });
+    var max = window.innerWidth - 32, widest = 0;
+    lines.forEach(function (l) {
+      var r = document.createRange(); r.selectNodeContents(l);
+      widest = Math.max(widest, r.getBoundingClientRect().width);
+    });
+    if (widest > max) {
+      var fs = parseFloat(getComputedStyle(heroType).fontSize);
+      heroType.style.fontSize = Math.floor(fs * max / widest) + "px";
+    }
+  }
+
   function setLang(lang) {
-    var en = lang === "en";
+    if (LANGS.indexOf(lang) < 0) lang = "es";
+    currentLang = lang;
+    var dict = I18N.t[lang] || {};
     nodes.forEach(function (n) {
-      n.el.textContent = en ? (EN[n.key] != null ? EN[n.key] : n.es) : n.es;
+      n.el.textContent = lang !== "es" && dict[n.key] != null ? dict[n.key] : n.es;
     });
     document.documentElement.lang = lang;
-    var m = META[lang] || META.es;
-    document.title = m.title;
-    var d = $('meta[name="description"]'); if (d) d.setAttribute("content", m.desc);
-    $$(".lang button").forEach(function (b) {
+    var m = I18N.meta[lang] || I18N.meta.es;
+    if (m) {
+      document.title = m.title;
+      var d = $('meta[name="description"]'); if (d) d.setAttribute("content", m.desc);
+    }
+    $$("[data-lang]").forEach(function (b) {
       var on = b.getAttribute("data-lang") === lang;
       b.classList.toggle("active", on);
       b.setAttribute("aria-pressed", on ? "true" : "false");
     });
+    var code = $("#langCode"); if (code) code.textContent = lang.toUpperCase();
     splitWords();
+    fitHero();
+    layoutSlides();
     try { localStorage.setItem("rdc-lang", lang); } catch (e) {}
   }
 
-  $$(".lang button").forEach(function (b) {
-    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); });
+  /* desktop dropdown */
+  var langBtn = $("#langBtn"), langList = $("#langList");
+  function closeLangs() { if (langList) { langList.hidden = true; langBtn.setAttribute("aria-expanded", "false"); } }
+  if (langBtn && langList) {
+    langBtn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var open = langList.hidden;
+      langList.hidden = !open;
+      langBtn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+    document.addEventListener("click", closeLangs);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeLangs(); });
+  }
+  $$("[data-lang]").forEach(function (b) {
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); closeLangs(); });
   });
+
+  function initialLang() {
+    try { var saved = localStorage.getItem("rdc-lang"); if (saved && LANGS.indexOf(saved) >= 0) return saved; } catch (e) {}
+    var prefs = navigator.languages || [navigator.language || "es"];
+    for (var i = 0; i < prefs.length; i++) {
+      var c = String(prefs[i] || "").slice(0, 2).toLowerCase();
+      if (LANGS.indexOf(c) >= 0) return c;
+    }
+    return "es";
+  }
 
   /* ---------------------------------------------------------------
      2. Hero video: right file for the screen shape, no autoplay for
@@ -257,11 +238,11 @@
     onScrollNav();
     if (!ticking) { ticking = true; requestAnimationFrame(function () { updateWords(); updateDeck(); ticking = false; }); }
   }, { passive: true });
-  window.addEventListener("resize", function () { layoutSlides(); updateWords(); updateDeck(); }, { passive: true });
+  window.addEventListener("resize", function () { fitHero(); layoutSlides(); updateWords(); updateDeck(); }, { passive: true });
 
-  var saved = "es";
-  try { saved = localStorage.getItem("rdc-lang") || "es"; } catch (e) {}
-  if (saved === "en") setLang("en"); else splitWords();
+  var startLang = initialLang();
+  if (startLang !== "es") setLang(startLang); else { splitWords(); fitHero(); }
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fitHero(); layoutSlides(); });
 
   /* ---------------------------------------------------------------
      7. Enquiry form → send from the site (POST /api/contact)
@@ -271,7 +252,8 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
-      var lang = document.documentElement.lang === "en" ? "en" : "es";
+      var lang = currentLang;
+      var STATUS = I18N.status;
       var status = $("#formStatus");
       var btn = form.querySelector('button[type="submit"]');
       var fd = new FormData(form);
@@ -288,7 +270,7 @@
         lang: lang
       };
 
-      if (status) { status.textContent = STATUS[lang].sending; status.className = "form__status show"; }
+      if (status) { status.textContent = (STATUS[lang] || STATUS.es).sending; status.className = "form__status show"; }
       if (btn) btn.disabled = true;
 
       fetch("/api/contact", {
@@ -303,14 +285,14 @@
         })
         .then(function (res) {
           if (res.ok) {
-            if (status) { status.textContent = STATUS[lang].ok; status.className = "form__status ok"; }
+            if (status) { status.textContent = (STATUS[lang] || STATUS.es).ok; status.className = "form__status ok"; }
             form.reset();
           } else {
-            if (status) { status.textContent = STATUS[lang].error; status.className = "form__status error"; }
+            if (status) { status.textContent = (STATUS[lang] || STATUS.es).error; status.className = "form__status error"; }
           }
         })
         .catch(function () {
-          if (status) { status.textContent = STATUS[lang].error; status.className = "form__status error"; }
+          if (status) { status.textContent = (STATUS[lang] || STATUS.es).error; status.className = "form__status error"; }
         })
         .then(function () { if (btn) btn.disabled = false; });
     });

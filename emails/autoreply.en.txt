@@ -1,6 +1,6 @@
 Dear {{NAME}},
 
-Your enquiry has reached us safely.
+your enquiry has reached us safely.
 
 Thank you for your interest in Real de Cote. Your enquiry has reached our export team safely and is now in good hands.
 
@@ -10,7 +10,7 @@ SUMMARY OF YOUR ENQUIRY
 ----------------------------------------
 Company: {{COMPANY}}
 Destination country: {{COUNTRY}}
-References of interest: {{INTEREST}}
+Products of interest: {{INTEREST}}
 Estimated volume: {{VOLUME}}
 Message: {{MESSAGE}}
 ----------------------------------------

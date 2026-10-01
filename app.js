@@ -55,10 +55,21 @@ function loadTpl(name) {
     return null;
   }
 }
-const AUTOREPLY = {
-  es: { subject: 'Hemos recibido su consulta — Real de Cote', html: loadTpl('autoreply.es.html'), text: loadTpl('autoreply.es.txt') },
-  en: { subject: "We've received your enquiry — Real de Cote", html: loadTpl('autoreply.en.html'), text: loadTpl('autoreply.en.txt') }
+// Built by assets/emails/build_autoreply.py (outside the public folder).
+const LANGS = ['es', 'en', 'it', 'fr', 'de', 'pt'];
+const LANG_NAMES = { es: 'Español', en: 'Inglés', it: 'Italiano', fr: 'Francés', de: 'Alemán', pt: 'Portugués' };
+const SUBJECTS = {
+  es: 'Hemos recibido su consulta — Real de Cote',
+  en: "We've received your enquiry — Real de Cote",
+  it: 'Abbiamo ricevuto la sua richiesta — Real de Cote',
+  fr: 'Nous avons bien reçu votre demande — Real de Cote',
+  de: 'Wir haben Ihre Anfrage erhalten — Real de Cote',
+  pt: 'Recebemos o seu pedido — Real de Cote'
 };
+const AUTOREPLY = {};
+LANGS.forEach(function (l) {
+  AUTOREPLY[l] = { subject: SUBJECTS[l], html: loadTpl('autoreply.' + l + '.html'), text: loadTpl('autoreply.' + l + '.txt') };
+});
 function renderTpl(tpl, vars) {
   return tpl.replace(/\{\{(\w+)\}\}/g, function (m, k) {
     return Object.prototype.hasOwnProperty.call(vars, k) ? vars[k] : m;
@@ -89,7 +100,7 @@ app.post('/api/contact', async function (req, res) {
     const interest = Array.isArray(b.interest)
       ? b.interest.map(function (i) { return clean(i, 40); }).filter(Boolean).join(', ')
       : clean(b.interest, 200);
-    const isEn = b.lang === 'en';
+    const lang = LANGS.indexOf(b.lang) >= 0 ? b.lang : 'es';
 
     if (!name || !company || !country || !email) {
       return res.status(400).json({ ok: false, error: 'missing_fields' });
@@ -102,15 +113,15 @@ app.post('/api/contact', async function (req, res) {
       return res.status(500).json({ ok: false, error: 'mail_not_configured' });
     }
 
-    const L = isEn
-      ? { name: 'Name', company: 'Company', country: 'Country', email: 'Email', phone: 'Phone', interest: 'Oils of interest', volume: 'Estimated volume', message: 'Message', subject: 'Trade enquiry' }
-      : { name: 'Nombre', company: 'Empresa', country: 'País', email: 'Email', phone: 'Teléfono', interest: 'Referencias de interés', volume: 'Volumen estimado', message: 'Mensaje', subject: 'Consulta comercial' };
+    // Internal notification: always in Spanish, with the customer's language.
+    const L = { name: 'Nombre', company: 'Empresa', country: 'País', email: 'Email', phone: 'Teléfono', interest: 'Productos de interés', volume: 'Volumen estimado', message: 'Mensaje', lang: 'Idioma', subject: 'Consulta comercial' };
 
     const subject = L.subject + ' — ' + (company || name);
 
     const rows = [
       [L.name, name], [L.company, company], [L.country, country],
-      [L.email, email], [L.phone, phone], [L.interest, interest], [L.volume, volume]
+      [L.email, email], [L.phone, phone], [L.interest, interest], [L.volume, volume],
+      [L.lang, LANG_NAMES[lang]]
     ];
 
     const textBody = rows.map(function (r) { return r[0] + ': ' + (r[1] || '—'); }).join('\n')
@@ -142,7 +153,7 @@ app.post('/api/contact', async function (req, res) {
     // Best-effort acknowledgement to the customer. Never blocks the enquiry:
     // if it fails, the company email already went out and we still return ok.
     try {
-      const T = isEn ? AUTOREPLY.en : AUTOREPLY.es;
+      const T = AUTOREPLY[lang];
       if (T.html && T.text) {
         const year = String(new Date().getFullYear());
         const dash = '—';
