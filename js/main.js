@@ -242,7 +242,11 @@
 
   var startLang = initialLang();
   if (startLang !== "es") setLang(startLang); else { splitWords(); fitHero(); }
-  if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { fitHero(); layoutSlides(); });
+  // fonts load without blocking paint: re-measure when the real faces arrive
+  if (document.fonts) {
+    if (document.fonts.ready) document.fonts.ready.then(function () { fitHero(); layoutSlides(); });
+    if (document.fonts.addEventListener) document.fonts.addEventListener("loadingdone", function () { fitHero(); layoutSlides(); });
+  }
 
   /* ---------------------------------------------------------------
      7. Enquiry form → send from the site (POST /api/contact)

@@ -6,6 +6,18 @@ const nodemailer = require('nodemailer');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.disable('x-powered-by');
+app.set('trust proxy', true); // behind Hostinger's CDN: req.ip is the visitor
+
+// Basic hardening headers (no CSP: the page uses inline JSON-LD and onload hooks).
+app.use(function (req, res, next) {
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin');
+  res.setHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+  next();
+});
+
 /* ---------------------------------------------------------------------
    SMTP configuration (Hostinger).
    Set these as environment variables in the Hostinger panel:
@@ -78,11 +90,25 @@ function renderTpl(tpl, vars) {
 
 app.use(express.json({ limit: '32kb' }));
 
+// Contact form: at most 5 enquiries per visitor every 10 minutes (spam guard).
+const RATE = { windowMs: 10 * 60 * 1000, max: 5, hits: new Map() };
+function rateLimited(ip) {
+  const now = Date.now();
+  const list = (RATE.hits.get(ip) || []).filter(function (t) { return now - t < RATE.windowMs; });
+  list.push(now);
+  RATE.hits.set(ip, list);
+  if (RATE.hits.size > 5000) RATE.hits.clear();
+  return list.length > RATE.max;
+}
+
 /* ---------------------------------------------------------------------
    Contact endpoint — the website sends the email itself, no mailto.
 --------------------------------------------------------------------- */
 app.post('/api/contact', async function (req, res) {
   try {
+    if (rateLimited(req.ip || 'unknown')) {
+      return res.status(429).json({ ok: false, error: 'too_many_requests' });
+    }
     const b = req.body || {};
 
     // Honeypot: if a bot filled the hidden "website" field, pretend success.
@@ -191,12 +217,27 @@ app.post('/api/contact', async function (req, res) {
   }
 });
 
-// Server-only assets — never expose the raw email templates over HTTP.
-app.use('/emails', function (req, res) { res.status(404).end(); });
+// Server-only files — the site is served from this same folder, so never
+// expose the server code, dependencies, templates or tooling over HTTP.
+const PRIVATE = /^\/(app\.js|package(-lock)?\.json|README\.md|node_modules|emails)(\/|$)|\.(py|md|log|sh)$/i;
+app.use(function (req, res, next) {
+  if (PRIVATE.test(req.path)) return res.status(404).end();
+  next();
+});
 
-app.use(express.static(__dirname, { extensions: ['html'], maxAge: '1h' }));
+// Cache: pages always revalidate; CSS/JS carry ?v= so they can be kept longer.
+app.use(express.static(__dirname, {
+  extensions: ['html'],
+  setHeaders: function (res, file) {
+    if (/\.html$/.test(file)) res.setHeader('Cache-Control', 'no-cache');
+    else if (/\.(css|js)$/.test(file)) res.setHeader('Cache-Control', 'public, max-age=2592000');
+    else res.setHeader('Cache-Control', 'public, max-age=604800');
+  }
+}));
 
 app.use(function (req, res) {
+  // Missing files are real 404s; extensionless routes fall back to the home page.
+  if (/\.[a-z0-9]{2,5}$/i.test(req.path)) return res.status(404).end();
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
