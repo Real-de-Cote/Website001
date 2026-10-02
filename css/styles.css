@@ -162,7 +162,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacin
 /* ---------- 1 · Hero: giant words behind the bottles ---------- */
 .hero .slide__inner{background:var(--white)}
 .hero__type{position:absolute;z-index:1;top:calc(var(--nav-h) + clamp(14px,3vh,34px));left:0;right:0;text-align:center;
-  font-size:clamp(2.6rem,8.4vw,8.6rem)}
+  font-size:clamp(2.6rem,min(8.4vw,14vh),8.6rem)}
 .hero__title,.hero__ghost{font-family:var(--display);font-weight:800;font-size:1em;line-height:.92;letter-spacing:-.03em;text-transform:uppercase;color:var(--green)}
 .hero__title span,.hero__ghost span{display:block;white-space:nowrap}
 .hero__ghost span:first-child{opacity:.14}
@@ -172,6 +172,13 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacin
 .hero__video{position:absolute;inset:0;z-index:2;width:100%;height:100%;object-fit:cover;object-position:center bottom;
   mix-blend-mode:multiply;pointer-events:none;background:url("/assets/video/olivo-desktop.jpg") center bottom/cover no-repeat;
   background-image:image-set(url("/assets/video/olivo-desktop.webp") type("image/webp"),url("/assets/video/olivo-desktop.jpg") type("image/jpeg"))}
+/* wide, short screens (laptops): show the whole frame instead of zooming in,
+   so the bottles stay below the title; soften the frame's side edges */
+@media (min-aspect-ratio:16/9){
+  .hero__video{object-fit:contain;background-size:contain;
+    -webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);
+            mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+}
 @media (max-aspect-ratio:1/1){.hero__video{background-image:url("/assets/video/olivo-mobile.jpg");
   background-image:image-set(url("/assets/video/olivo-mobile.webp") type("image/webp"),url("/assets/video/olivo-mobile.jpg") type("image/jpeg"))}}
 .hero__side{position:absolute;z-index:3;bottom:clamp(70px,14vh,130px);width:min(260px,21vw);display:flex;flex-direction:column;gap:18px}
