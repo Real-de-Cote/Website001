@@ -164,6 +164,12 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacin
 .slide{position:sticky;top:0;min-height:100vh;min-height:100svh;background:var(--white);
   border-radius:var(--radius) var(--radius) 0 0;box-shadow:0 -24px 48px -28px rgba(var(--brand-rgb),.28);overflow:hidden;isolation:isolate}
 .slide:first-child{border-radius:0;box-shadow:none}
+/* from the collection on, sections scroll normally (no sticking, no overlap);
+   the collection still rises over the manifesto, so it keeps its rounded top */
+.slide--flow{position:relative;top:auto!important;border-radius:0;box-shadow:none}
+.slide--flow.collection{border-radius:var(--radius) var(--radius) 0 0;box-shadow:0 -24px 48px -28px rgba(var(--brand-rgb),.28)}
+.slide--flow .slide__inner{transform:none}
+.slide--flow::after{display:none}
 .slide__inner{position:relative;min-height:inherit;transform-origin:50% 0;
   transform:scale(calc(1 - var(--cover,0) * .06));transition:transform .1s linear;will-change:transform}
 .slide::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;background:var(--ink);opacity:calc(var(--cover,0) * .35)}

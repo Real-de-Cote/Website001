@@ -203,7 +203,9 @@
   var slides = $$(".deck > .slide");
   function layoutSlides() {
     var vh = window.innerHeight;
-    slides.forEach(function (s) { s.style.top = Math.min(0, vh - s.offsetHeight) + "px"; });
+    slides.forEach(function (s) {
+      s.style.top = s.classList.contains("slide--flow") ? "" : Math.min(0, vh - s.offsetHeight) + "px";
+    });
   }
   function updateDeck() {
     if (REDUCE) return;
