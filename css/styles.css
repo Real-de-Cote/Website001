@@ -1,6 +1,6 @@
 /* =====================================================================
    REAL DE COTE — Aceite de Oliva Virgen Extra
-   "Olivo": white with the brand's navy, white accents, olive-leaf light
+   "Olivo": white with the brand's original deep navy + gold, olive-leaf light
    Type: Sora (giant display) · EB Garamond (headings, lead text)
          Dancing Script (accents) · Switzer (UI)
    Curtain intro + stacked slides that overlap on scroll
@@ -9,15 +9,15 @@
 :root{
   --white:#ffffff;
   /* brand: the original Real de Cote navy */
-  --brand:#0e1c30;
-  --brand-2:#1c3049;
-  --brand-deep:#0a1626;
-  --brand-rgb:14,28,48;
-  /* accent: white on navy (--accent); on white it falls back to a lighter navy (--accent-ink) */
-  --accent:#ffffff;
-  --accent-2:#ffffff;
-  --accent-ink:#1c3049;
-  --on-accent:#0e1c30;
+  --brand:#0a1626;
+  --brand-2:#13243a;
+  --brand-deep:#060f1c;
+  --brand-rgb:10,22,38;
+  /* accent: the original gold. On dark (--accent) and readable on white (--accent-ink) */
+  --accent:#c8a25c;
+  --accent-2:#e4bb74;
+  --accent-ink:#7a5f2a;
+  --on-accent:#0a1626;
   /* light surfaces and text */
   --tint:#f6f1e7;
   --tint-2:#ece3cf;
@@ -79,7 +79,7 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.05;letter-spacin
   font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;font-weight:700;border:1px solid var(--brand);
   transition:background-color .35s var(--ease),color .35s var(--ease),border-color .35s var(--ease)}
 .btn--solid{background:var(--brand);color:var(--white)}
-.btn--solid:hover{background:var(--brand-2);border-color:var(--brand-2);color:var(--white)}
+.btn--solid:hover{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 .btn--line{color:var(--brand);background:rgba(255,255,255,.7)}
 .btn--line:hover{background:var(--brand);color:var(--white)}
 .btn:disabled{opacity:.6;cursor:progress}
