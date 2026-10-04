@@ -369,6 +369,8 @@ app.use(async function pages(req, res, next) {
     if (canon === '/404') return notFound(req, res);
     // Renamed pages keep their old address working (one permanent redirect).
     if (canon === '/el-cortijo') canon = '/la-finca';
+    // La Lata is switched off for now (client, 2026-10-04): send old links to the collection.
+    if (canon === '/coleccion/lata') canon = '/coleccion';
 
     const rel = await resolvePage(canon);
     if (!rel) return htmlForm ? next() : notFound(req, res);

@@ -113,7 +113,7 @@ const vm = require('vm');
 const ROOT = path.resolve(__dirname, '..');
 const SRC = path.join(ROOT, '_src');
 const ORIGIN = 'https://www.realdecote.es';
-const V = 'maison-10';                      // asset version (?v=) of CSS/JS and of the media below: bump on every pass that touches css/, js/ or the media (30-day / 7-day caches)
+const V = 'maison-12';                      // asset version (?v=) of CSS/JS and of the media below: bump on every pass that touches css/, js/ or the media (30-day / 7-day caches)
 /* Media whose files keep their names when they are re-made (the drone film and
    posters, the graded editorial photos) also carry ?v=V in every page: written
    by the build over the finished HTML (versionMedia), so a re-grade reaches
@@ -1091,7 +1091,7 @@ function menuProducts(meta) {
     const href = '/coleccion/' + p.slug;
     return '<li class="sheet__subitem"><a class="sheet__sublink" href="' + href + '"' + cur(href) + '>' + esc(p.name) + '</a></li>';
   });
-  items.push('<li class="sheet__subitem"><a class="sheet__sublink" href="/coleccion/lata"' + cur('/coleccion/lata') + ' data-i18n="lata.crumb">La Lata</a></li>');
+  // La Lata (/coleccion/lata) is switched off for now (client, 2026-10-04); page source in _src/disabled/.
   return indent(items.join('\n'), 10);
 }
 
@@ -1776,7 +1776,7 @@ built.forEach(function (b) {
 /* sitemap                                                             */
 /* ------------------------------------------------------------------ */
 const today = new Date().toISOString().slice(0, 10);
-const order = ['/', '/coleccion'].concat(F.products.map(function (p) { return '/coleccion/' + p.slug; }), ['/coleccion/lata', '/la-finca', '/profesionales']);
+const order = ['/', '/coleccion'].concat(F.products.map(function (p) { return '/coleccion/' + p.slug; }), ['/la-finca', '/profesionales']);
 const inMap = built.filter(function (b) { return b.path && !/noindex/.test(b.meta.robots || ''); })
   .sort(function (a, b) {
     const ia = order.indexOf(a.path), ib = order.indexOf(b.path);

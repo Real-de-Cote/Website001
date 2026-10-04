@@ -344,7 +344,7 @@ window.RDC_I18N = {
       "img.lata.mini": "Real de Cote Mini tin",
       "img.lata.clasica": "Real de Cote Clásica tin",
       "img.lata.maxi": "Real de Cote Maxi tin",
-      "img.lata.vertido": "A Real de Cote tin lying on its side, with a little spilled oil",
+      "img.lata.vertido": "Detail of the cap and gold rim of a Real de Cote tin, with the crest in gold",
       /* photography (Pexels / Wikimedia Commons, illustrative — never "our" grove, castle, chef or restaurant) */
       "img.foto.hoja": "Olive leaves",
       "img.foto.hileras": "Rows of olive trees seen from the air",
@@ -484,7 +484,7 @@ window.RDC_I18N = {
       "img.lata.mini": "Latta Mini di Real de Cote",
       "img.lata.clasica": "Latta Clásica di Real de Cote",
       "img.lata.maxi": "Latta Maxi di Real de Cote",
-      "img.lata.vertido": "Latta Real de Cote adagiata su un fianco, con un po' d'olio versato",
+      "img.lata.vertido": "Dettaglio del tappo e del bordo dorato di una latta Real de Cote, con lo stemma in oro",
       /* photography (Pexels / Wikimedia Commons, illustrative — never "our" grove, castle, chef or restaurant) */
       "img.foto.hoja": "Foglie d'ulivo",
       "img.foto.hileras": "Filari di ulivi visti dall'alto",
@@ -624,7 +624,7 @@ window.RDC_I18N = {
       "img.lata.mini": "Boîte Mini de Real de Cote",
       "img.lata.clasica": "Boîte Clásica de Real de Cote",
       "img.lata.maxi": "Boîte Maxi de Real de Cote",
-      "img.lata.vertido": "Boîte Real de Cote couchée, avec un peu d'huile répandue",
+      "img.lata.vertido": "Détail du bouchon et du bord doré d'une boîte Real de Cote, avec l'écusson doré",
       /* photography (Pexels / Wikimedia Commons, illustrative — never "our" grove, castle, chef or restaurant) */
       "img.foto.hoja": "Feuilles d'olivier",
       "img.foto.hileras": "Rangées d'oliviers vues du ciel",
@@ -764,7 +764,7 @@ window.RDC_I18N = {
       "img.lata.mini": "Dose Mini von Real de Cote",
       "img.lata.clasica": "Dose Clásica von Real de Cote",
       "img.lata.maxi": "Dose Maxi von Real de Cote",
-      "img.lata.vertido": "Liegende Dose von Real de Cote mit etwas ausgelaufenem Öl",
+      "img.lata.vertido": "Detail von Verschluss und Goldrand einer Dose von Real de Cote, mit dem Wappen in Gold",
       /* photography (Pexels / Wikimedia Commons, illustrative — never "our" grove, castle, chef or restaurant) */
       "img.foto.hoja": "Olivenblätter",
       "img.foto.hileras": "Reihen von Olivenbäumen aus der Luft",
@@ -904,7 +904,7 @@ window.RDC_I18N = {
       "img.lata.mini": "Lata Mini da Real de Cote",
       "img.lata.clasica": "Lata Clásica da Real de Cote",
       "img.lata.maxi": "Lata Maxi da Real de Cote",
-      "img.lata.vertido": "Lata da Real de Cote deitada, com um pouco de azeite derramado",
+      "img.lata.vertido": "Pormenor da tampa e do rebordo dourado de uma lata da Real de Cote, com o brasão dourado",
       /* photography (Pexels / Wikimedia Commons, illustrative — never "our" grove, castle, chef or restaurant) */
       "img.foto.hoja": "Folhas de oliveira",
       "img.foto.hileras": "Fileiras de oliveiras vistas do ar",
