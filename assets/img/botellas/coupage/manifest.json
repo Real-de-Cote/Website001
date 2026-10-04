@@ -1,0 +1,122 @@
+{
+ "coupage": {
+  "packshot": "/assets/img/botellas/coupage/packshot.webp",
+  "packshot480": "/assets/img/botellas/coupage/packshot-480.webp",
+  "packshot250": "/assets/img/botellas/coupage/packshot-250.webp",
+  "packshot_size": {
+   "w": 1000,
+   "h": 2000,
+   "scale": "packshot and packshot250 share camera, canvas and floor line",
+   "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, Coupage: vidrio negro con serigrafía dorada y cápsula amarilla, vista de frente. Imagen 3D sobre fondo transparente.",
+   "alt250_es": "Botella de 250 ml de aceite de oliva virgen extra Real de Cote, Coupage: vidrio negro con serigrafía dorada y cápsula amarilla, vista de frente, a la misma escala que la de 500 ml. Imagen 3D sobre fondo transparente."
+  },
+  "turntable": {
+   "frames": 36,
+   "pattern": "/assets/img/botellas/coupage/giro/giro-{nn}.webp",
+   "w": 900,
+   "h": 1200,
+   "step_deg": 10,
+   "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, Coupage girando sobre sí misma: 36 vistas cada 10 grados. Imagen 3D sobre fondo transparente.",
+   "_doc": "{nn} = 00..35, two digits; frame 00 = front, the bottle turns 10 degrees per frame (camera fixed)"
+  },
+  "glb": "/assets/img/botellas/coupage/modelo.glb",
+  "gallery": [
+   {
+    "file": "/assets/img/botellas/coupage/estudio.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "estudio",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, Coupage: vidrio negro con serigrafía dorada y cápsula amarilla, de frente en un estudio oscuro. Imagen 3D.",
+    "file800": "/assets/img/botellas/coupage/estudio-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/coupage/packshot.webp",
+    "w": 1000,
+    "h": 2000,
+    "kind": "packshot",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, Coupage: vidrio negro con serigrafía dorada y cápsula amarilla, vista de frente. Imagen 3D sobre fondo transparente."
+   },
+   {
+    "file": "/assets/img/botellas/coupage/tres-cuartos.webp",
+    "w": 1000,
+    "h": 2000,
+    "kind": "tres-cuartos",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, Coupage, girada unos 30 grados: escudo, marca y · COUPAGE · en dorado y, a la derecha, el escudo mate tono sobre tono del vidrio. Imagen 3D sobre fondo transparente."
+   },
+   {
+    "file": "/assets/img/botellas/coupage/etiqueta.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "etiqueta",
+    "alt_es": "Detalle de la serigrafía dorada del frente de la botella de 500 ml: escudo, marca Real de Cote, ACEITE DE OLIVA VIRGEN EXTRA y · COUPAGE ·. Imagen 3D."
+   },
+   {
+    "file": "/assets/img/botellas/coupage/cuello.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "cuello",
+    "alt_es": "Detalle del cuello de la botella Real de Cote de 500 ml: cápsula amarilla con filigrana y escudo en negro, sobre el vidrio negro. Imagen 3D."
+   },
+   {
+    "file": "/assets/img/botellas/coupage/dorso.webp",
+    "w": 1000,
+    "h": 2000,
+    "kind": "dorso",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, Coupage, vista del dorso: textos legales, tabla nutricional y bloque dorado con el código de barras serigrafiados en el vidrio negro. Imagen 3D sobre fondo transparente."
+   },
+   {
+    "file": "/assets/img/botellas/coupage/par.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "par",
+    "alt_es": "Botellas de 500 ml y 250 ml de aceite de oliva virgen extra Real de Cote, Coupage, una junto a otra a la misma escala, en un estudio oscuro. Imagen 3D.",
+    "file800": "/assets/img/botellas/coupage/par-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/coupage/estudio-estampado.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "estudio-estampado",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, Coupage en un estudio oscuro; al fondo, el escudo de la botella repetido en relieve gris oscuro. Imagen 3D.",
+    "file800": "/assets/img/botellas/coupage/estudio-estampado-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/coupage/estudio-claro.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "estudio-claro",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, Coupage: vidrio negro con serigrafía dorada y cápsula amarilla, de frente sobre fondo blanco roto. Imagen 3D.",
+    "file800": "/assets/img/botellas/coupage/estudio-claro-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/coupage/real-frente.webp",
+    "w": 1200,
+    "h": 1500,
+    "kind": "real-frente",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Coupage, de vidrio negro con cápsula amarilla: vista de frente, con el escudo, la marca y la variedad serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   {
+    "file": "/assets/img/botellas/coupage/real-dorso.webp",
+    "w": 1200,
+    "h": 1500,
+    "kind": "real-dorso",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Coupage, de vidrio negro con cápsula amarilla: vista del dorso, con los textos legales, la tabla nutricional y el código de barras serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   {
+    "file": "/assets/img/botellas/coupage/real-lado.webp",
+    "w": 1200,
+    "h": 1500,
+    "kind": "real-lado",
+    "alt_es": "Botella de 250 ml de aceite de oliva virgen extra Real de Cote, variedad Coupage, de vidrio negro con cápsula amarilla: vista lateral, con el escudo mate tono sobre tono en el vidrio. Fotografía real sobre fondo oscuro."
+   }
+  ]
+ }
+}

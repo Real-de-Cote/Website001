@@ -1,0 +1,314 @@
+{
+  "hoja": {
+    "w": 1920,
+    "h": 2400,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "hoja-1920.jpg",
+    "look": "olive",
+    "source": "Pexels 35932081",
+    "alt": "Hojas de olivo"
+  },
+  "hileras": {
+    "w": 1440,
+    "h": 1679,
+    "widths": [
+      640,
+      960,
+      1440
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "hileras-1440.jpg",
+    "look": "olive",
+    "source": "Pexels video 19906111 (frame)",
+    "alt": "Hileras de olivos vistas desde el aire",
+    "note": "native crop 1038x1210; 1440 px width is a Lanczos upscale"
+  },
+  "olivo-centenario": {
+    "w": 2880,
+    "h": 3600,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920,
+      2880
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "olivo-centenario-1920.jpg",
+    "look": "bw",
+    "source": "Pexels 30756469",
+    "alt": "Olivo viejo de tronco retorcido, en blanco y negro"
+  },
+  "castillo-cote": {
+    "w": 1920,
+    "h": 2400,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "castillo-cote-1920.jpg",
+    "look": "bw",
+    "source": "Wikimedia Commons",
+    "alt": "Castillo de Cote sobre su peñón, con colinas de olivar al fondo",
+    "credit": "Castillo de Cote · Foto: Frabaquero (editada), CC BY-SA 3.0 ES",
+    "license": {
+      "name": "CC BY-SA 3.0 ES",
+      "url": "https://creativecommons.org/licenses/by-sa/3.0/es/",
+      "author": "Frabaquero",
+      "title": "Castillo de cote y Peñón de Zaframagón",
+      "source": "https://commons.wikimedia.org/wiki/File:Castillo_de_cote_y_Pe%C3%B1%C3%B3n_de_Zaframag%C3%B3n.jpg",
+      "changes": "Cropped, converted to black and white, tone curve and grain by Real de Cote. This edited version is shared under the same licence (CC BY-SA 3.0 ES)."
+    }
+  },
+  "bodega": {
+    "w": 3840,
+    "h": 2160,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920,
+      2880,
+      3840
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "bodega-1920.jpg",
+    "look": "bw",
+    "source": "Real de Cote (client photo, tanks; signs and person retouched out)",
+    "alt": "Depósitos de acero inoxidable en penumbra",
+    "note": "native crop 1072x603; 3840 px width is a Lanczos upscale",
+    "pos": "50% 40%"
+  },
+  "bodega-m": {
+    "w": 1440,
+    "h": 2560,
+    "widths": [
+      640,
+      960,
+      1170,
+      1440
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "bodega-m-1170.jpg",
+    "look": "bw",
+    "source": "Real de Cote (client photo, tanks; phone crop of bodega)",
+    "alt": "Depósitos de acero inoxidable en penumbra",
+    "note": "native crop 396x704; 1440 px width is a Lanczos upscale"
+  },
+  "mesa-1": {
+    "w": 2880,
+    "h": 3600,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920,
+      2880
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "mesa-1-1920.jpg",
+    "look": "food",
+    "source": "Pexels 15572592",
+    "alt": "Crema de verduras con un hilo de aceite de oliva"
+  },
+  "mesa-2": {
+    "w": 2880,
+    "h": 2880,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920,
+      2880
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "mesa-2-1920.jpg",
+    "look": "food",
+    "source": "Pexels 24246114",
+    "alt": "Plato servido sobre piedra oscura"
+  },
+  "mesa-3": {
+    "w": 2880,
+    "h": 3600,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920,
+      2880
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "mesa-3-1920.jpg",
+    "look": "food",
+    "source": "Pexels 17243886",
+    "alt": "Pulpo en láminas con aceite de oliva y limón"
+  },
+  "mesa-4": {
+    "w": 2880,
+    "h": 2880,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920,
+      2880
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "mesa-4-1920.jpg",
+    "look": "bw",
+    "source": "Pexels 24246103",
+    "alt": "Plato servido, en blanco y negro"
+  },
+  "mesa-5": {
+    "w": 2880,
+    "h": 3600,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920,
+      2880
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "mesa-5-1920.jpg",
+    "look": "food",
+    "source": "Pexels 10875296",
+    "alt": "Calamar con aceite de oliva y hierbas en un cuenco blanco"
+  },
+  "mesa-6": {
+    "w": 1440,
+    "h": 1440,
+    "widths": [
+      640,
+      960,
+      1440
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "mesa-6-1440.jpg",
+    "look": "food",
+    "source": "Pexels 32399760",
+    "alt": "Plato servido sobre mantel blanco"
+  },
+  "olivar-colinas": {
+    "w": 3840,
+    "h": 2160,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920,
+      2880,
+      3840
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "olivar-colinas-1920.jpg",
+    "look": "olive",
+    "source": "Pexels 29749216",
+    "alt": "Colinas de olivar en Andalucía bajo un cielo cubierto",
+    "pos": "50% 50%"
+  },
+  "olivar-colinas-m": {
+    "w": 1560,
+    "h": 2773,
+    "widths": [
+      780,
+      1170,
+      1560
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "olivar-colinas-m-1170.jpg",
+    "look": "olive",
+    "source": "Pexels 29749216 (phone crop)",
+    "alt": "Colinas de olivar en Andalucía bajo un cielo cubierto"
+  },
+  "finca": {
+    "w": 1920,
+    "h": 1083,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "finca-1920.jpg",
+    "look": "olive",
+    "source": "Real de Cote (client photo, site/assets/img/finca.jpg)",
+    "alt": "Olivares de Montellano con el castillo de Cote al fondo",
+    "pos": "80% 50%"
+  },
+  "muro": {
+    "w": 2400,
+    "h": 1356,
+    "widths": [
+      640,
+      960,
+      1440,
+      1920,
+      2400
+    ],
+    "formats": [
+      "avif",
+      "webp"
+    ],
+    "jpg": "muro-1920.jpg",
+    "look": "olive",
+    "source": "Real de Cote (client photo, site/assets/img/muro-2400.jpg)",
+    "alt": "La colección Real de Cote sobre un muro encalado frente a un olivar",
+    "pos": "50% 50%"
+  }
+}

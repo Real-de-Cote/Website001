@@ -1,0 +1,53 @@
+{{! Black falling into the brand navy. Four columns of caps links, then the base row. }}
+<footer class="site-footer surface--dark">
+  <div class="site-footer__cols">
+    <nav class="site-footer__col" aria-labelledby="footContacto">
+      <p class="site-footer__title" id="footContacto" data-i18n="nav.contact">Contacto</p>
+      <ul class="site-footer__list">
+        <li class="site-footer__item"><a class="site-footer__link" href="mailto:info@realdecote.es">info@realdecote.es</a></li>
+        <li class="site-footer__item"><a class="site-footer__link" href="tel:+34680408580">+34 680 40 85 80</a></li>
+        <li class="site-footer__item"><a class="site-footer__link site-footer__link--wa" href="https://wa.me/34680408580" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li class="site-footer__item"><a class="site-footer__link" href="https://www.instagram.com/realdecote" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__col" aria-labelledby="footColeccion">
+      <p class="site-footer__title" id="footColeccion" data-i18n="nav.collection">Colección</p>
+      <ul class="site-footer__list">
+{{FOOTER_PRODUCTS}}
+        <li class="site-footer__item"><a class="site-footer__link" href="/coleccion/lata" data-i18n="lata.crumb">La Lata</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__col" aria-labelledby="footCasa">
+      <p class="site-footer__title" id="footCasa" data-i18n="foot.house">La Casa</p>
+      <ul class="site-footer__list">
+        <li class="site-footer__item"><a class="site-footer__link" href="/el-cortijo" data-i18n="nav.estate">El Cortijo</a></li>
+        <li class="site-footer__item"><a class="site-footer__link" href="/profesionales" data-i18n="nav.trade">Profesionales</a></li>
+      </ul>
+    </nav>
+
+    <nav class="site-footer__col" aria-labelledby="footAyuda">
+      <p class="site-footer__title" id="footAyuda" data-i18n="foot.help">Ayuda</p>
+      <ul class="site-footer__list">
+        <li class="site-footer__item"><a class="site-footer__link" href="/aviso-legal" data-i18n="foot.legal">Aviso legal</a></li>
+        <li class="site-footer__item"><a class="site-footer__link" href="/privacidad" data-i18n="foot.privacy">Privacidad</a></li>
+        <li class="site-footer__item"><a class="site-footer__link" href="/privacidad#cookies" data-i18n="foot.cookies">Cookies</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="site-footer__base">
+    <a class="site-footer__logo" href="/"><img class="site-footer__wordmark" src="/assets/img/wordmark-gold.webp" {{size /assets/img/wordmark-gold.webp}} loading="lazy" decoding="async" alt="Real de Cote · Inicio" data-i18n-attr="alt:nav.brand"></a>
+    <address class="site-footer__addr">Real de Cote AOVE, S.L. · Ctra. de Coripe, km 2,3 — Cortijo Cote · 41770 Montellano, Sevilla</address>
+    <div class="site-footer__langs" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.title">
+      <button class="site-footer__lang" type="button" data-lang="es" lang="es" aria-pressed="true" aria-label="ES · Español">ES</button>
+      <button class="site-footer__lang" type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="EN · English">EN</button>
+      <button class="site-footer__lang" type="button" data-lang="it" lang="it" aria-pressed="false" aria-label="IT · Italiano">IT</button>
+      <button class="site-footer__lang" type="button" data-lang="fr" lang="fr" aria-pressed="false" aria-label="FR · Français">FR</button>
+      <button class="site-footer__lang" type="button" data-lang="de" lang="de" aria-pressed="false" aria-label="DE · Deutsch">DE</button>
+      <button class="site-footer__lang" type="button" data-lang="pt" lang="pt" aria-pressed="false" aria-label="PT · Português">PT</button>
+    </div>
+    <p class="site-footer__copy">© {{YEAR}} Real de Cote AOVE, S.L. · <span data-i18n="foot.rights">Todos los derechos reservados.</span></p>
+  </div>
+</footer>

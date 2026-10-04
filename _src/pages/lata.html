@@ -1,0 +1,74 @@
+---
+page: lata
+out: coleccion/lata.html
+path: /coleccion/lata
+title: La Lata Real de Cote · Próximamente
+description: Próximamente, La Lata Real de Cote: una colección en lata negra con el escudo en oro y estuche para regalo, en tres modelos: Mini, Clásica y Maxi.
+bodyClass: page--lata
+nav: coleccion
+header: overlay
+crumbs: nav.home|Inicio|/ ; nav.collection|Colección|/coleccion ; lata.crumb|La Lata
+ogImage: /assets/img/lata/escena.jpg
+ogImageAlt: Latas negras de Real de Cote con el escudo en oro, junto a su estuche
+priority: 0.6
+---
+{{#head}}
+<link rel="preload" as="image" type="image/webp" href="/assets/img/lata/escena-sq.webp" media="(max-width: 767px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="/assets/img/lata/escena.webp" imagesrcset="{{srcset /assets/img/lata/escena-800.webp /assets/img/lata/escena.webp}}" imagesizes="(max-width: 767px) 210vw, 100vw" media="(min-width: 768px)" fetchpriority="high">
+{{/head}}
+{{! 1 · Panel hero: the tin scene (illustrative studio image, never captioned as a real range). }}
+<section class="panel panel--top surface--dark" aria-labelledby="lata-title">
+  <picture class="panel__poster" data-parallax>
+    <source media="(max-width: 767px)" type="image/webp" srcset="/assets/img/lata/escena-sq.webp" {{size /assets/img/lata/escena-sq.webp}}>
+    <img class="panel__img panel__img--escena" src="/assets/img/lata/escena.webp" srcset="{{srcset /assets/img/lata/escena-800.webp /assets/img/lata/escena.webp}}" sizes="(max-width: 767px) 210vw, 100vw" {{size /assets/img/lata/escena.webp}} fetchpriority="high" alt="Latas negras de Real de Cote con el escudo en oro, junto a su estuche" data-i18n-attr="alt:img.lata.escena">
+  </picture>
+  <div class="panel__foot" data-reveal-group>
+    <div class="panel__head">
+      <p class="panel__kicker label" data-reveal="lines" data-i18n="lata.badge">Próximamente</p>
+      <h1 class="panel__title" data-reveal="lines" id="lata-title" data-i18n="lata.title">La Lata Real de Cote</h1>
+    </div>
+    <div class="panel__actions" data-reveal="fade">
+      <a class="link-cta" id="lata-link" href="#lata-intro" aria-labelledby="lata-link lata-intro-title" data-i18n="home.discover">Descubrir</a>
+    </div>
+  </div>
+</section>
+
+{{! 2 · Text block. Capacities and the launch date are unknown: never state them. }}
+<section class="textblock surface--light" id="lata-intro" aria-labelledby="lata-intro-title">
+  <div class="textblock__inner" data-reveal-group>
+    <p class="textblock__label label" data-reveal="lines" data-i18n="lata.crumb">La Lata</p>
+    <h2 class="textblock__title" data-reveal="lines" id="lata-intro-title" data-i18n="lata.intro.title">Lata negra, escudo en oro</h2>
+    <p class="textblock__text" data-reveal="lines" data-i18n="lata.intro.p">Una nueva colección en lata negra con el escudo en oro y su estuche para regalo. Tres modelos, Mini, Clásica y Maxi, con el mismo diseño; capacidades y fecha de lanzamiento por confirmar.</p>
+    <a class="textblock__link link-cta" data-reveal="fade" id="lata-intro-link" href="/profesionales?interes=lata#contacto" aria-labelledby="lata-intro-link lata-intro-title" data-i18n="lata.notify">Avísame cuando esté disponible</a>
+  </div>
+</section>
+
+{{! 3 · The three models as tiles: transparent packshots on a light tile, true relative size. }}
+<section class="tiles tiles--lata surface--light" aria-labelledby="lata-models-title">
+  <h2 class="visually-hidden" id="lata-models-title" data-i18n="lata.models">Tres modelos</h2>
+{{LATA_MODELS}}
+</section>
+
+{{! 4 · Image pair: gift box (small) and the lying tin (large). Illustrative images. }}
+<div class="pair surface--light">
+  <figure class="pair__item pair__item--small" data-reveal="img">
+    <img class="pair__img" src="/assets/img/lata/estuche-800.webp" srcset="{{srcset /assets/img/lata/estuche-800.webp /assets/img/lata/estuche.webp}}" sizes="(max-width: 767px) 62vw, 26vw" {{size /assets/img/lata/estuche-800.webp}} loading="lazy" decoding="async" alt="Estuche negro de Real de Cote con el escudo en oro" data-i18n-attr="alt:img.lata.estuche">
+  </figure>
+  <figure class="pair__item pair__item--large" data-reveal="img">
+    <img class="pair__img pair__img--vertido" src="/assets/img/lata/vertido.webp" srcset="{{srcset /assets/img/lata/vertido-800.webp /assets/img/lata/vertido.webp}}" sizes="(max-width: 767px) 170vw, 85vw" {{size /assets/img/lata/vertido.webp}} loading="lazy" decoding="async" alt="Lata de Real de Cote tumbada, con un poco de aceite vertido" data-i18n-attr="alt:img.lata.vertido">
+  </figure>
+</div>
+
+{{! 5 · Closing panel: the three tins standing on the studio stage (a different image from the hero
+    scene and the pour), the centred text block above them, solid button. }}
+<section class="panel panel--center panel--stage surface--dark" aria-labelledby="lata-cta-title">
+  <picture class="panel__poster">
+    <img class="panel__img" src="/assets/img/lata/trio-1000.webp" srcset="{{srcset /assets/img/lata/trio-1000.webp /assets/img/lata/trio.webp}}" sizes="(max-width: 767px) 90vw, 40vw" {{size /assets/img/lata/trio-1000.webp}} loading="lazy" decoding="async" alt="">
+  </picture>
+  <div class="panel__body" data-reveal-group>
+    <p class="panel__label label" data-reveal="lines" data-i18n="lata.crumb">La Lata</p>
+    <h2 class="panel__title" data-reveal="lines" id="lata-cta-title" data-i18n="lata.cta.title">¿Le interesa La Lata?</h2>
+    <p class="panel__text" data-reveal="lines" data-i18n="lata.cta.text">Déjenos sus datos y le escribiremos en cuanto esté disponible.</p>
+    <a class="btn" data-reveal="fade" href="/profesionales?interes=lata#contacto" data-i18n="lata.notify">Avísame cuando esté disponible</a>
+  </div>
+</section>

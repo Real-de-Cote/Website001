@@ -1,0 +1,25 @@
+---
+page: 404
+out: 404.html
+title: Página no encontrada · Real de Cote
+description: La página que busca no existe o ha cambiado de dirección.
+bodyClass: page--404
+header: solid
+robots: noindex
+ogImage: /assets/img/muro-1200.jpg
+ogImageAlt: La colección Real de Cote sobre un muro encalado frente a un olivar
+---
+{{! Centred text block under the solid header: crest, label, title, one line, button + link.
+    A light block like the other text pages (off-white in 'mixto', dark in 'negro'). }}
+<section class="textblock textblock--first textblock--404 surface--light" aria-labelledby="e404-title">
+  <div class="textblock__inner" data-reveal-group>
+    <img class="textblock__crest" data-reveal="fade" src="/assets/img/crest-gold.png" {{size /assets/img/crest-gold.png}} decoding="async" alt="">
+    <p class="textblock__label label" data-reveal="lines" data-i18n="e404.label">Error 404</p>
+    <h1 class="textblock__title" data-reveal="lines" id="e404-title" data-i18n="e404.title">Página no encontrada</h1>
+    <p class="textblock__text" data-reveal="lines" data-i18n="e404.text">La dirección que busca no existe o ha cambiado.</p>
+    <div class="textblock__actions" data-reveal="fade">
+      <a class="btn" href="/" data-i18n="e404.home">Volver al inicio</a>
+      <a class="link-cta" href="/coleccion" data-i18n="col.see">Ver los cinco aceites</a>
+    </div>
+  </div>
+</section>

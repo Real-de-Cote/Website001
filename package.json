@@ -2,10 +2,14 @@
   "name": "realdecote",
   "version": "1.0.0",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "node tools/build.js"
   },
   "dependencies": {
     "express": "4.21.2",
     "nodemailer": "^6.9.16"
+  },
+  "devDependencies": {
+    "terser": "5.51.2"
   }
 }

@@ -1,0 +1,181 @@
+---
+page: home
+out: index.html
+path: /
+title: Real de Cote · Aceite de oliva virgen extra · Montellano, Sevilla
+description: Real de Cote — aceite de oliva virgen extra sin filtrar, una marca de Montellano (Sevilla). Coupage, Manzanilla, Arbequina, Hojiblanca y BIO ecológico. Exportación mundial.
+bodyClass: page--home
+header: overlay
+ogImage: /assets/video/drone-desktop.jpg
+ogImageAlt: Olivar visto desde el aire
+jsonld: organization
+verify: yes
+priority: 1.0
+---
+{{#head}}
+<link rel="preload" as="image" type="image/webp" href="/assets/video/drone-mobile.webp" media="(max-width: 767px)" fetchpriority="high">
+<link rel="preload" as="image" type="image/webp" href="/assets/video/drone-desktop.webp" media="(min-width: 768px)" fetchpriority="high">
+{{/head}}
+{{#script}}
+<script>(function(h){var m={"#coleccion":"/coleccion","#cortijo":"/el-cortijo","#profesionales":"/profesionales","#contacto":"/profesionales#contacto"};if(m[h])location.replace(m[h])})(location.hash)</script>
+{{/script}}
+{{! 1 · Hero panel: drone film, the gold logo is the h1. The drone footage is illustrative:
+    its caption stays neutral ("Olivar, vista aérea"), never "our grove / our estate". }}
+<section class="panel panel--hero surface--dark" aria-labelledby="hero-title" data-hero>
+  <picture class="panel__poster">
+    <source media="(max-width: 767px)" type="image/webp" srcset="/assets/video/drone-mobile.webp" {{size /assets/video/drone-mobile.webp}}>
+    <img class="panel__img" src="/assets/video/drone-desktop.webp" {{size /assets/video/drone-desktop.webp}} fetchpriority="high" alt="Olivar, vista aérea" data-i18n-attr="alt:home.drone.caption">
+  </picture>
+  <video class="panel__video" muted loop playsinline preload="none" disablepictureinpicture aria-hidden="true" tabindex="-1"
+         data-video
+         data-src-2160-av1="/assets/video/drone-2160.av1.mp4" data-src-2160-hevc="/assets/video/drone-2160.hevc.mp4"
+         data-src-1080-av1="/assets/video/drone-1080.av1.mp4" data-src-desktop="/assets/video/drone-desktop.mp4"
+         data-src-mobile-av1="/assets/video/drone-mobile.av1.mp4" data-src-mobile="/assets/video/drone-mobile.mp4"
+         data-media-mobile="(max-width: 767px)"></video>
+  <h1 class="panel__brand" id="hero-title">
+    <img class="panel__logo" src="/assets/img/logo-gold.png" {{size /assets/img/logo-gold.png}} fetchpriority="high" decoding="async" alt="">
+    <span class="visually-hidden">Real de Cote</span>
+  </h1>
+  <div class="panel__foot" data-reveal-group>
+    <p class="panel__title" data-reveal="lines" data-i18n="col.label">Aceite de oliva virgen extra</p>
+    <div class="panel__actions" data-reveal="fade">
+{{VIDEO_TOGGLE}}
+      <a class="link-cta" id="hero-link" href="#home-coleccion" aria-labelledby="hero-link home-col-title" data-i18n="home.discover">Descubrir</a>
+    </div>
+  </div>
+</section>
+
+{{! 2 · Collection: two-up (the blends) then three-up (the single varieties). A tile carries
+    data-hover-video when /assets/img/botellas/<id>/hover.mp4 exists (build: hoverFilmAttrs). }}
+<section class="tiles surface--light" id="home-coleccion" aria-labelledby="home-col-title">
+  <h2 class="visually-hidden" id="home-col-title" data-i18n="col.grid">Los cinco aceites</h2>
+{{HOME_TILES}}
+</section>
+
+{{! 3 · Panel: the collection in situ (muro photo, or the bottle film once it exists). }}
+<section class="panel surface--dark" aria-labelledby="home-situ-title">
+{{HOME_SITU_MEDIA}}
+  <div class="panel__foot" data-reveal-group>
+    <h2 class="panel__title" data-reveal="lines" id="home-situ-title" data-i18n="col.title">La colección</h2>
+    <div class="panel__actions" data-reveal="fade">
+{{HOME_SITU_TOGGLE}}
+      <a class="link-cta" id="home-situ-link" href="/coleccion" aria-labelledby="home-situ-link home-situ-title" data-i18n="home.explore">Explorar</a>
+    </div>
+  </div>
+</section>
+
+{{! 4 · Manifesto text block (dp-home-04). }}
+<section class="textblock surface--light" aria-labelledby="intro-title">
+  <div class="textblock__inner" data-reveal-group>
+    <p class="textblock__label label" data-reveal="lines">Real de Cote</p>
+    <h2 class="textblock__title" data-reveal="lines" id="intro-title" data-i18n="home.intro.title">Cinco aceites. Una sola casa.</h2>
+    <p class="textblock__text" data-reveal="lines" data-i18n="home.intro.p">Coupage, Manzanilla, Arbequina, Hojiblanca y BIO, todos sin filtrar, en 500 ml y 250 ml. Cada uno tiene su ficha técnica: variedad, información nutricional, formatos y conservación.</p>
+    <a class="textblock__link link-cta" data-reveal="fade" id="intro-link" href="/el-cortijo" aria-labelledby="intro-link intro-title" data-i18n="home.more">Más información</a>
+  </div>
+</section>
+
+{{! 5 · Image pair (dp-home-05): olive leaves (small, left, set lower) and olive rows from the
+    air (large, right). Graded stock photos (Pexels), illustrative: neutral alts, never "our grove". }}
+<div class="pair surface--light">
+  <figure class="pair__item pair__item--small" data-reveal="img">
+    {{foto hoja pair-small}}
+  </figure>
+  <figure class="pair__item pair__item--large" data-reveal="img">
+    {{foto hileras pair-large}}
+  </figure>
+</div>
+
+{{! 6 · Dark centred panel "La bodega" (dp-home-06): near-black photo with one soft highlight,
+    kicker, big title, solid dark button. The photo is the stock fallback until the client's
+    tank photo is graded to /assets/img/foto/bodega-*; nothing else changes then. Copy stays
+    neutral: never "almazara", "nuestra producción", "elaboramos". }}
+<section class="panel panel--center panel--cellar surface--dark" aria-labelledby="home-cellar-title">
+  {{foto bodega panel}}
+  <div class="panel__body" data-reveal-group>
+    <p class="panel__label label" data-reveal="lines">Real de Cote</p>
+    <h2 class="panel__title" data-reveal="lines" id="home-cellar-title" data-i18n="home.cellar.title">La bodega</h2>
+    <a class="btn btn--dark" data-reveal="fade" id="home-cellar-link" href="/el-cortijo" aria-labelledby="home-cellar-link home-cellar-title" data-i18n="home.explore">Explorar</a>
+  </div>
+</section>
+
+{{! 7 · Text block "Legado" (dp-home-07): the town and the castle of Cote. Facts only: the head
+    office is in Montellano; the castle stands on a hill nearby. Never "our estate / our land". }}
+<section class="textblock surface--light" aria-labelledby="home-legado-title">
+  <div class="textblock__inner" data-reveal-group>
+    <p class="textblock__label label" data-reveal="lines" data-i18n="home.legado.label">Legado</p>
+    <h2 class="textblock__title" data-reveal="lines" id="home-legado-title" data-i18n="home.house.title">Montellano, Sevilla</h2>
+    <p class="textblock__text" data-reveal="lines" data-i18n="home.legado.p">Real de Cote tiene su sede en Montellano, al sur de la provincia de Sevilla, donde la campiña se encuentra con la sierra. Cerca del pueblo, el castillo de Cote se alza en lo alto de un cerro, entre colinas de olivar.</p>
+    <a class="textblock__link link-cta" data-reveal="fade" id="home-legado-link" href="/el-cortijo" aria-labelledby="home-legado-link home-legado-title" data-i18n="home.explore">Explorar</a>
+  </div>
+</section>
+
+{{! 8 · Black-and-white pair (dp-home-08): an old olive tree (small) and the castle of Cote (large).
+    The castle photo is CC BY-SA 3.0 ES: its credit line sits under it (the build checks it). }}
+<div class="pair pair--legado surface--light">
+  <figure class="pair__item pair__item--small" data-reveal="img">
+    {{foto olivo-centenario pair-small}}
+  </figure>
+  <figure class="pair__item pair__item--large pair__item--credit" data-reveal-group>
+    {{foto castillo-cote pair-large reveal}}
+    {{credit castillo-cote}}
+  </figure>
+</div>
+
+{{! 9 · Text block: La Lata (coming soon; capacities are not known, never state them). }}
+<section class="textblock surface--light" aria-labelledby="home-lata-title">
+  <div class="textblock__inner" data-reveal-group>
+    <p class="textblock__label label" data-reveal="lines" data-i18n="lata.badge">Próximamente</p>
+    <h2 class="textblock__title" data-reveal="lines" id="home-lata-title" data-i18n="lata.title">La Lata Real de Cote</h2>
+    <p class="textblock__text" data-reveal="lines" data-i18n="home.lata.p">Una nueva colección en lata negra con el escudo en oro y su estuche para regalo, en tres modelos: Mini, Clásica y Maxi.</p>
+    <a class="textblock__link link-cta" data-reveal="fade" id="home-lata-link" href="/coleccion/lata" aria-labelledby="home-lata-link home-lata-title" data-i18n="home.discover">Descubrir</a>
+  </div>
+</section>
+
+{{! 9b · Image pair: gift box (small, left) and the tin scene (large, right). Illustrative images. }}
+<div class="pair surface--light">
+  <figure class="pair__item pair__item--small" data-reveal="img">
+    <img class="pair__img" src="/assets/img/lata/estuche-800.webp" {{size /assets/img/lata/estuche-800.webp}} loading="lazy" decoding="async" alt="Estuche negro de Real de Cote con el escudo en oro" data-i18n-attr="alt:img.lata.estuche">
+  </figure>
+  <figure class="pair__item pair__item--large" data-reveal="img">
+    <img class="pair__img pair__img--escena" src="/assets/img/lata/escena.webp" srcset="{{srcset /assets/img/lata/escena-800.webp /assets/img/lata/escena.webp}}" sizes="(max-width: 767px) 176vw, 81vw" {{size /assets/img/lata/escena.webp}} loading="lazy" decoding="async" alt="Latas negras de Real de Cote con el escudo en oro, junto a su estuche" data-i18n-attr="alt:img.lata.escena">
+  </figure>
+</div>
+
+{{! 10 · Gastronomy row (DP's Instagram row): the title "En la mesa", then a horizontally
+    scrollable list of dishes (4:5 and 1:1 mixed, one in black and white), then a small line:
+    the Instagram link and "Imágenes ilustrativas". Stock photos (Pexels), no captions: the row
+    must not read as the brand's own feed or dishes, so the handle is a discreet link under the
+    row, not the title, and the photos are said to be illustrative. The alts say what the dish
+    is and never imply that a chef or a restaurant uses Real de Cote. The scroller is the
+    labelled region (keyboard: Tab to it, then the arrow keys); the prev/next buttons stay
+    hidden until main.js wires them. }}
+<section class="rail surface--light">
+  <div class="rail__head">
+    <h2 class="rail__title" data-reveal="lines" id="home-mesa-title" data-i18n="home.mesa.label">En la mesa</h2>
+  </div>
+  <div class="rail__viewport" id="home-mesa-rail" data-rail data-lenis-prevent-horizontal tabindex="0" role="region" aria-labelledby="home-mesa-title">
+    <ul class="rail__list">
+{{MESA_ROW}}
+    </ul>
+  </div>
+  <div class="rail__nav">
+    <button class="rail__arrow rail__arrow--prev" type="button" data-rail-prev aria-controls="home-mesa-rail" aria-label="Imagen anterior" data-i18n-attr="aria-label:pdp.prevShot" hidden><span class="rail__arrow-glyph" aria-hidden="true">←</span></button>
+    <button class="rail__arrow rail__arrow--next" type="button" data-rail-next aria-controls="home-mesa-rail" aria-label="Imagen siguiente" data-i18n-attr="aria-label:pdp.nextShot" hidden><span class="rail__arrow-glyph" aria-hidden="true">→</span></button>
+  </div>
+  <div class="rail__foot" data-reveal="fade">
+    <a class="rail__follow label" href="{{INSTAGRAM}}" target="_blank" rel="noopener"><span data-i18n="home.mesa.follow">Síguenos en Instagram</span> · @realdecote</a>
+    <p class="rail__note label" data-i18n="home.mesa.note">Imágenes ilustrativas</p>
+  </div>
+</section>
+
+{{! 11 · Final panel (dp-home-09): olive-grove hills under an overcast sky, dry and matte, with a
+    centred title, one line and a solid black button. There is no store locator, so the panel
+    keeps the trade-contact intent. Backdrop only: empty alt. }}
+<section class="panel panel--center panel--final surface--dark" aria-labelledby="home-trade-title">
+  {{foto olivar-colinas panel}}
+  <div class="panel__body" data-reveal-group>
+    <h2 class="panel__title" data-reveal="lines" id="home-trade-title" data-i18n="exp.eyebrow">Profesionales y exportación</h2>
+    <p class="panel__text" data-reveal="lines" data-i18n="home.trade.p">Distribución, hostelería, tiendas gourmet y marca blanca.</p>
+    <a class="btn btn--dark" data-reveal="fade" id="home-trade-link" href="/profesionales#contacto" aria-labelledby="home-trade-link home-trade-title" data-i18n="home.contact">Contactar</a>
+  </div>
+</section>

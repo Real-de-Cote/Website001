@@ -1,0 +1,8 @@
+{{! Pause/play text button of a film. It must sit inside the parent element of its
+    <video data-video> (the .panel). main.js removes [hidden] once the film plays,
+    toggles .is-paused and swaps aria-label (video.pause / video.play); the CSS shows
+    the matching word. }}
+<button class="panel__toggle" type="button" data-video-toggle aria-label="Pausar vídeo" data-i18n-attr="aria-label:video.pause" hidden>
+  <span class="panel__toggle-text panel__toggle-text--pause" data-i18n="home.video.pause">Pausa</span>
+  <span class="panel__toggle-text panel__toggle-text--play" data-i18n="home.video.play">Reproducir</span>
+</button>

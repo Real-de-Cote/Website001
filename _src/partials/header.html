@@ -1,0 +1,27 @@
+<a class="skip-link" href="#main" data-i18n="skip">Saltar al contenido</a>
+
+{{! Fixed bar. data-header="overlay": transparent over the first (dark) block, main.js adds
+    .is-solid after 40 px of scroll. data-header="solid": navy from the start. }}
+<header class="site-header site-header--{{HEADER_MODE}}" data-header="{{HEADER_MODE}}">
+  <div class="site-header__bar">
+    <button class="site-header__menu" type="button" data-sheet-open="menuSheet" aria-controls="menuSheet" aria-expanded="false" aria-haspopup="dialog" data-i18n="nav.menu">Menú</button>
+
+    <a class="site-header__brand" href="/"{{AC_HOME}}><img class="site-header__wordmark" src="/assets/img/wordmark-gold.webp" {{size /assets/img/wordmark-gold.webp}} decoding="async" alt="Real de Cote · Inicio" data-i18n-attr="alt:nav.brand"></a>
+
+    <div class="site-header__tools">
+      <div class="lang-inline" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.title">
+        <button class="lang-inline__btn" type="button" data-lang="es" lang="es" aria-pressed="true" aria-label="ES · Español">ES</button>
+        <button class="lang-inline__btn" type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="EN · English">EN</button>
+        <button class="lang-inline__btn" type="button" data-lang="it" lang="it" aria-pressed="false" aria-label="IT · Italiano">IT</button>
+        <button class="lang-inline__btn" type="button" data-lang="fr" lang="fr" aria-pressed="false" aria-label="FR · Français">FR</button>
+        <button class="lang-inline__btn" type="button" data-lang="de" lang="de" aria-pressed="false" aria-label="DE · Deutsch">DE</button>
+        <button class="lang-inline__btn" type="button" data-lang="pt" lang="pt" aria-pressed="false" aria-label="PT · Português">PT</button>
+      </div>
+      <a class="wa-link" href="https://wa.me/34680408580" target="_blank" rel="noopener"><span class="wa-link__dot" aria-hidden="true"></span>WhatsApp</a>
+      <button class="lang-toggle" type="button" data-sheet-open="langSheet" aria-controls="langSheet" aria-expanded="false" aria-haspopup="dialog">
+        <span class="visually-hidden" data-i18n="lang.title">Idioma</span>
+        <span class="lang-toggle__code" data-lang-current>ES</span>
+      </button>
+    </div>
+  </div>
+</header>

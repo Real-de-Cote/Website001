@@ -1,0 +1,172 @@
+{
+ "_doc": "Fotos reales retocadas (retouch_real.py): recorte, enderezado, balance de blancos y limpieza; el texto de las etiquetas no se ha repintado. Fondo de estudio #0b0b0c.",
+ "images": {
+  "hojiblanca": {
+   "frente": {
+    "file": "hojiblanca/real-frente.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 47682,
+    "source_index": 20,
+    "source": "WhatsApp Image 2026-10-02 at 20.58.01.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.794,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca, de vidrio negro con cápsula azul: vista de frente, con el escudo, la marca y la variedad serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   "dorso": {
+    "file": "hojiblanca/real-dorso.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 75102,
+    "source_index": 22,
+    "source": "WhatsApp Image 2026-10-02 at 20.58.36.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.79,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca, de vidrio negro con cápsula azul: vista del dorso, con los textos legales, la tabla nutricional y el código de barras serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   "lado": {
+    "file": "hojiblanca/real-lado.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 39562,
+    "source_index": 21,
+    "source": "WhatsApp Image 2026-10-02 at 20.58.18.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.724,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca, de vidrio negro con cápsula azul: vista lateral, con el escudo mate tono sobre tono en el vidrio. Fotografía real sobre fondo oscuro."
+   }
+  },
+  "bio": {
+   "frente": {
+    "file": "bio/real-frente.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 51810,
+    "source_index": 24,
+    "source": "WhatsApp Image 2026-10-02 at 20.59.17.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.709,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote BIO, de vidrio negro con cápsula verde: vista de frente, con el escudo, la marca y la mención BIO serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   "dorso": {
+    "file": "bio/real-dorso.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 76294,
+    "source_index": 26,
+    "source": "WhatsApp Image 2026-10-02 at 21.00.02.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.795,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote BIO, de vidrio negro con cápsula verde: vista del dorso, con los textos legales, la tabla nutricional y el código de barras serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   "lado": {
+    "file": "bio/real-lado.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 28516,
+    "source_index": 25,
+    "source": "WhatsApp Image 2026-10-02 at 20.59.38.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.701,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote BIO, de vidrio negro con cápsula verde: vista lateral, con el escudo mate tono sobre tono en el vidrio. Fotografía real sobre fondo oscuro."
+   }
+  },
+  "manzanilla": {
+   "frente": {
+    "file": "manzanilla/real-frente.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 52358,
+    "source_index": 28,
+    "source": "WhatsApp Image 2026-10-02 at 21.00.36.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.725,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla, de vidrio negro con cápsula negra: vista de frente, con el escudo, la marca y la variedad serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   "dorso": {
+    "file": "manzanilla/real-dorso.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 75090,
+    "source_index": 30,
+    "source": "WhatsApp Image 2026-10-02 at 21.01.30.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.751,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla, de vidrio negro con cápsula negra: vista del dorso, con los textos legales, la tabla nutricional y el código de barras serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   "lado": {
+    "file": "manzanilla/real-lado.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 27452,
+    "source_index": 29,
+    "source": "WhatsApp Image 2026-10-02 at 21.00.58.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.694,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla, de vidrio negro con cápsula negra: vista lateral, con el escudo mate tono sobre tono en el vidrio. Fotografía real sobre fondo oscuro."
+   }
+  },
+  "coupage": {
+   "frente": {
+    "file": "coupage/real-frente.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 51902,
+    "source_index": 32,
+    "source": "WhatsApp Image 2026-10-02 at 21.04.03.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.747,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Coupage, de vidrio negro con cápsula amarilla: vista de frente, con el escudo, la marca y la variedad serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   "dorso": {
+    "file": "coupage/real-dorso.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 76684,
+    "source_index": 33,
+    "source": "WhatsApp Image 2026-10-02 at 21.04.20.jpeg",
+    "size_ml": 500,
+    "scale_from_source": 0.751,
+    "alt": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Coupage, de vidrio negro con cápsula amarilla: vista del dorso, con los textos legales, la tabla nutricional y el código de barras serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   "lado": {
+    "file": "coupage/real-lado.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 26734,
+    "source_index": 5,
+    "source": "WhatsApp Image 2026-10-02 at 20.50.30.jpeg",
+    "size_ml": 250,
+    "scale_from_source": 0.752,
+    "alt": "Botella de 250 ml de aceite de oliva virgen extra Real de Cote, variedad Coupage, de vidrio negro con cápsula amarilla: vista lateral, con el escudo mate tono sobre tono en el vidrio. Fotografía real sobre fondo oscuro.",
+    "nota": "No hay foto lateral de la botella de 500 ml: esta vista es la de 250 ml."
+   }
+  },
+  "arbequina": {
+   "lado": {
+    "file": "arbequina/real-lado.webp",
+    "width": 1200,
+    "height": 1500,
+    "bytes": 40196,
+    "source_index": 13,
+    "source": "WhatsApp Image 2026-10-02 at 20.53.34.jpeg",
+    "size_ml": 250,
+    "scale_from_source": 0.82,
+    "alt": "Botella de 250 ml de aceite de oliva virgen extra Real de Cote con la cápsula roja de la variedad Arbequina, vista lateral, con el escudo mate tono sobre tono en el vidrio. Fotografía real sobre fondo oscuro.",
+    "nota": "La botella fotografiada con cápsula roja lleva serigrafiado MANZANILLA en el frente (unidad con etiqueta equivocada, confirmado por el cliente). Por eso solo se publican la vista lateral y el detalle del cuello; no hay frente ni dorso reales de Arbequina."
+   },
+   "cuello": {
+    "file": "arbequina/real-cuello.webp",
+    "width": 800,
+    "height": 1000,
+    "bytes": 57174,
+    "source_index": 13,
+    "source": "WhatsApp Image 2026-10-02 at 20.53.34.jpeg",
+    "size_ml": 250,
+    "scale_from_source": 1.57,
+    "alt": "Detalle del cuello de una botella de Real de Cote: cápsula roja con filigrana y escudo dorados sobre vidrio negro.",
+    "nota": "La botella fotografiada con cápsula roja lleva serigrafiado MANZANILLA en el frente (unidad con etiqueta equivocada, confirmado por el cliente). Por eso solo se publican la vista lateral y el detalle del cuello; no hay frente ni dorso reales de Arbequina."
+   }
+  }
+ }
+}

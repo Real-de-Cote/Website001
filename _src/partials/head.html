@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es" data-page="{{PAGE}}" data-fondo="{{FONDO}}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a1626">
+<meta name="color-scheme" content="dark">
+<title>{{TITLE}}</title>
+<meta name="description" content="{{DESC}}">
+{{META_EXTRA}}
+<meta property="og:site_name" content="Real de Cote">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{TITLE}}">
+<meta property="og:description" content="{{DESC}}">
+{{OG_URL}}
+<meta property="og:image" content="{{OG_IMAGE}}">
+<meta property="og:image:width" content="{{OG_IMAGE_W}}">
+<meta property="og:image:height" content="{{OG_IMAGE_H}}">
+<meta property="og:image:alt" content="{{OG_IMAGE_ALT}}">
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="pt_PT">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="48x48" href="/assets/img/favicon-48.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/assets/img/favicon-96.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/img/favicon-192.png">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+{{! Lenis, the smooth wheel scrolling of SPEC-DP-4 (js/vendor, MIT): only for a mouse or a trackpad
+    without reduced motion (touch keeps the native scroll), and not where main.js found it too slow
+    earlier in this session (sessionStorage rdc-native), deferred and versioned. Requested here,
+    before the CSS, so it is usually there when main.js starts it; main.js also waits for it. }}
+<script>(function(d,w){var m=w.matchMedia&&w.matchMedia.bind(w),n=false;try{n=w.sessionStorage.getItem("rdc-native")==="1"}catch(e){}if(!n&&m&&m("(hover: hover) and (pointer: fine)").matches&&!m("(prefers-reduced-motion: reduce)").matches){var s=d.createElement("script");s.src="/js/vendor/lenis.min.js?v={{V}}";s.defer=true;s.id="lenis-js";d.head.appendChild(s)} })(document,window)</script>
+{{PRELOADS}}
+<link rel="preload" as="style" href="{{FONTS}}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{FONTS}}"></noscript>
+<link rel="stylesheet" href="/css/styles.css?v={{V}}">
+{{! html.js: the hidden first states of the motion (styles.css 18). html.films: the films will play
+    here (as main.js initFilms decides: no reduced motion, no data saver, no 2g), so their pause
+    buttons keep their place from the first paint and a film starting never moves its link. }}
+<script>(function(h,w){h.classList.add("js");var c=w.navigator.connection,r=!!w.matchMedia&&w.matchMedia("(prefers-reduced-motion: reduce)").matches;if(!r&&!(c&&(c.saveData===true||/(^|-)2g$/.test(String(c.effectiveType||"")))))h.classList.add("films")})(document.documentElement,window)</script>
+{{HEAD_SCRIPT}}
+{{JSONLD}}
+</head>

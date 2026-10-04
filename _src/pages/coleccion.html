@@ -1,0 +1,66 @@
+---
+page: coleccion
+out: coleccion.html
+path: /coleccion
+title: La colección · Aceite de oliva virgen extra · Real de Cote
+description: Cinco aceites de oliva virgen extra sin filtrar: Coupage, Manzanilla, Arbequina, Hojiblanca y BIO ecológico, en 500 ml y 250 ml. Ficha técnica de cada uno.
+bodyClass: page--coleccion
+nav: coleccion
+header: overlay
+crumbs: nav.home|Inicio|/ ; nav.collection|Colección
+ogImage: /assets/img/muro-1200.jpg
+ogImageAlt: La colección Real de Cote sobre un muro encalado frente a un olivar
+priority: 0.9
+---
+{{#head}}
+{{SITU_PRELOAD}}
+{{/head}}
+{{! 1 · Panel hero: the collection in situ (muro photo, or the bottle film once it exists). }}
+<section class="panel panel--top surface--dark" aria-labelledby="col-title">
+{{HOME_SITU_MEDIA}}
+  <div class="panel__foot" data-reveal-group>
+    <h1 class="panel__title" data-reveal="lines" id="col-title" data-i18n="col.title">La colección</h1>
+    <div class="panel__actions" data-reveal="fade">
+{{HOME_SITU_TOGGLE}}
+      <a class="link-cta" id="col-link" href="#col-tiles" aria-labelledby="col-link col-grid-title" data-i18n="home.discover">Descubrir</a>
+    </div>
+  </div>
+</section>
+
+{{! 2 · Text block: the introduction, between the hero and the tiles (DP's listing pages: the
+    intro, then the products). After the tiles it stacked onto the La Lata text block: two
+    text blocks in a row, one long empty off-white band in 'mixto'. }}
+<section class="textblock surface--light" aria-labelledby="col-intro-title">
+  <div class="textblock__inner" data-reveal-group>
+    <p class="textblock__label label" data-reveal="lines" data-i18n="col.label">Aceite de oliva virgen extra</p>
+    <h2 class="textblock__title" data-reveal="lines" id="col-intro-title" data-i18n="col.intro.title">Tres monovarietales y dos coupages</h2>
+    <p class="textblock__text" data-reveal="lines" data-i18n="col.intro.p">Todos sin filtrar, en 500 ml y 250 ml. Cada aceite tiene su ficha técnica: variedad, información nutricional, formatos y conservación.</p>
+    <a class="textblock__link link-cta" data-reveal="fade" id="col-intro-link" href="/profesionales#contacto" aria-labelledby="col-intro-link col-intro-title" data-i18n="home.contact">Contactar</a>
+  </div>
+</section>
+
+{{! 3 · The five oils: two-up (the blends) then three-up (the single varieties), as on the home. }}
+<section class="tiles surface--light" id="col-tiles" aria-labelledby="col-grid-title">
+  <h2 class="visually-hidden" id="col-grid-title" data-i18n="col.grid">Los cinco aceites</h2>
+{{HOME_TILES}}
+</section>
+
+{{! 4 · Text block: La Lata (coming soon; capacities are not known, never state them). }}
+<section class="textblock surface--light" aria-labelledby="col-lata-title">
+  <div class="textblock__inner" data-reveal-group>
+    <p class="textblock__label label" data-reveal="lines" data-i18n="lata.badge">Próximamente</p>
+    <h2 class="textblock__title" data-reveal="lines" id="col-lata-title" data-i18n="lata.title">La Lata Real de Cote</h2>
+    <p class="textblock__text" data-reveal="lines" data-i18n="home.lata.p">Una nueva colección en lata negra con el escudo en oro y su estuche para regalo, en tres modelos: Mini, Clásica y Maxi.</p>
+    <a class="textblock__link link-cta" data-reveal="fade" id="col-lata-link" href="/coleccion/lata" aria-labelledby="col-lata-link col-lata-title" data-i18n="home.discover">Descubrir</a>
+  </div>
+</section>
+
+{{! 5 · Image pair: gift box (small, left) and the tin scene (large, right). Illustrative images. }}
+<div class="pair surface--light">
+  <figure class="pair__item pair__item--small" data-reveal="img">
+    <img class="pair__img" src="/assets/img/lata/estuche-800.webp" {{size /assets/img/lata/estuche-800.webp}} loading="lazy" decoding="async" alt="Estuche negro de Real de Cote con el escudo en oro" data-i18n-attr="alt:img.lata.estuche">
+  </figure>
+  <figure class="pair__item pair__item--large" data-reveal="img">
+    <img class="pair__img pair__img--escena" src="/assets/img/lata/escena.webp" srcset="{{srcset /assets/img/lata/escena-800.webp /assets/img/lata/escena.webp}}" sizes="(max-width: 767px) 176vw, 81vw" {{size /assets/img/lata/escena.webp}} loading="lazy" decoding="async" alt="Latas negras de Real de Cote con el escudo en oro, junto a su estuche" data-i18n-attr="alt:img.lata.escena">
+  </figure>
+</div>

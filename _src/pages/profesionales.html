@@ -1,0 +1,117 @@
+---
+page: profesionales
+out: profesionales.html
+path: /profesionales
+title: Profesionales y exportación · Real de Cote
+description: Distribución, hostelería, tiendas gourmet y marca blanca. Envío mundial EXW Sevilla, pedido mínimo de 1 palé por referencia. Solicite catálogo, tarifa 2026 y muestras.
+bodyClass: page--profesionales
+nav: profesionales
+header: solid
+crumbs: nav.home|Inicio|/ ; nav.trade|Profesionales
+ogImage: /assets/img/muro-1200.jpg
+ogImageAlt: La colección Real de Cote sobre un muro encalado frente a un olivar
+priority: 0.7
+---
+{{! 1 · Text block intro under the solid header (the first block is a light surface). }}
+<section class="textblock textblock--first surface--light" aria-labelledby="trade-title">
+  <div class="textblock__inner" data-reveal-group>
+    <p class="textblock__label label" data-reveal="lines" data-i18n="exp.eyebrow">Profesionales y exportación</p>
+    <h1 class="textblock__title" data-reveal="lines" id="trade-title" data-i18n="exp.title">De España a cualquier mercado del mundo</h1>
+    <p class="textblock__text" data-reveal="lines" data-i18n="exp.intro">Distribución, hostelería, tiendas gourmet y marca blanca. Le enviamos catálogo, tarifa 2026 y muestras.</p>
+    <a class="textblock__link link-cta" data-reveal="fade" id="trade-link" href="#contacto" aria-labelledby="trade-link con-title" data-i18n="home.contact">Contactar</a>
+  </div>
+</section>
+
+{{! 2 · Terms and direct contact (left), the enquiry form (right). }}
+<section class="trade surface--light" aria-labelledby="trade-terms-title">
+  <div class="trade__grid">
+    <div class="trade__info">
+      <h2 class="trade__title label" id="trade-terms-title" data-i18n="trade.terms">Condiciones</h2>
+      <dl class="terms">
+        <div class="terms__row"><dt class="terms__key" data-i18n="exp.c1t">Envío</dt><dd class="terms__val" data-i18n="exp.c1p">Mundial, EXW Sevilla</dd></div>
+        <div class="terms__row"><dt class="terms__key" data-i18n="exp.c2t">Pedido mínimo</dt><dd class="terms__val" data-i18n="exp.c2p">1 palé por referencia</dd></div>
+        <div class="terms__row"><dt class="terms__key" data-i18n="exp.c3t">Plazo de preparación</dt><dd class="terms__val" data-i18n="exp.c3p">30–40 días</dd></div>
+        <div class="terms__row"><dt class="terms__key" data-i18n="exp.c4t">Marca blanca</dt><dd class="terms__val" data-i18n="exp.c4p">A medida</dd></div>
+        <div class="terms__row"><dt class="terms__key" data-i18n="exp.c5t">También</dt><dd class="terms__val" data-i18n="exp.c5p">Vinagres, aceite de orujo de oliva, garrafa de 5 L, aceitunas Gordal</dd></div>
+      </dl>
+
+      <h2 class="trade__title label" id="trade-direct-title" data-i18n="trade.direct">Contacto directo</h2>
+      <ul class="direct" aria-labelledby="trade-direct-title">
+        <li class="direct__item"><span class="direct__key label" data-i18n="con.f.email">Email</span><a class="direct__link" href="mailto:info@realdecote.es">info@realdecote.es</a></li>
+        <li class="direct__item"><span class="direct__key label">WhatsApp</span><a class="direct__link direct__link--wa" href="https://wa.me/34680408580" target="_blank" rel="noopener">+34 680 40 85 80</a></li>
+        <li class="direct__item"><span class="direct__key label" data-i18n="con.f.phone">Teléfono</span><a class="direct__link" href="tel:+34680408580">+34 680 40 85 80</a></li>
+      </ul>
+    </div>
+
+    <section class="enquiry" id="contacto" aria-labelledby="con-title">
+      <h2 class="enquiry__title" id="con-title" data-i18n="con.title">Consulta comercial</h2>
+      <form class="form" id="enquiry" novalidate aria-labelledby="con-title">
+        <!-- honeypot anti-spam: invisible para personas, los bots lo rellenan -->
+        <div class="form__hp" aria-hidden="true">
+          <label for="f-website">No rellenar</label>
+          <input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off">
+        </div>
+        <!-- página de origen (?producto=<id> / ?interes=lata), la rellena main.js -->
+        <input id="f-product" name="product" type="hidden" value="">
+        <div class="form__row">
+          <div class="form__field">
+            <label class="form__label" for="f-name"><span data-i18n="con.f.name">Nombre</span> <span class="form__req" aria-hidden="true">*</span></label>
+            <input class="form__input" id="f-name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="f-company"><span data-i18n="con.f.company">Empresa</span> <span class="form__req" aria-hidden="true">*</span></label>
+            <input class="form__input" id="f-company" name="company" type="text" required autocomplete="organization">
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__field">
+            <label class="form__label" for="f-country"><span data-i18n="con.f.country">País</span> <span class="form__req" aria-hidden="true">*</span></label>
+            <input class="form__input" id="f-country" name="country" type="text" required autocomplete="country-name">
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="f-email"><span data-i18n="con.f.email">Email</span> <span class="form__req" aria-hidden="true">*</span></label>
+            <input class="form__input" id="f-email" name="email" type="email" required autocomplete="email">
+          </div>
+        </div>
+        <fieldset class="form__group">
+          <legend class="form__label" data-i18n="con.f.interest">Referencias de interés</legend>
+          <div class="form__checks">
+            <label class="form__check"><input class="form__check-input" type="checkbox" name="interest" value="AOVE"><span class="form__check-text" data-i18n="con.i.range">Coupage y monovarietales</span></label>
+            <label class="form__check"><input class="form__check-input" type="checkbox" name="interest" value="BIO"><span class="form__check-text">BIO</span></label>
+            <label class="form__check"><input class="form__check-input" type="checkbox" name="interest" value="Lata"><span class="form__check-text" data-i18n="con.i.lata">La Lata (próximamente)</span></label>
+            <label class="form__check"><input class="form__check-input" type="checkbox" name="interest" value="Vinagres"><span class="form__check-text" data-i18n="con.i.vinegar">Vinagres</span></label>
+            <label class="form__check"><input class="form__check-input" type="checkbox" name="interest" value="Orujo"><span class="form__check-text" data-i18n="con.i.pomace">Aceite de orujo de oliva</span></label>
+            <label class="form__check"><input class="form__check-input" type="checkbox" name="interest" value="Marca blanca"><span class="form__check-text" data-i18n="con.i.private">Marca blanca</span></label>
+          </div>
+        </fieldset>
+        <div class="form__row">
+          <div class="form__field">
+            <label class="form__label" for="f-volume" data-i18n="con.f.volume">Volumen estimado</label>
+            <select class="form__input form__input--select" id="f-volume" name="volume">
+              <option value="" data-i18n="con.v.choose">Seleccione…</option>
+              <option data-i18n="con.v1">Menos de 1 palé</option>
+              <option data-i18n="con.v2">1–5 palés</option>
+              <option data-i18n="con.v3">5–20 palés</option>
+              <option data-i18n="con.v4">Más de 20 palés</option>
+              <option data-i18n="con.v5">Contenedor completo</option>
+            </select>
+          </div>
+          <div class="form__field">
+            <label class="form__label" for="f-phone" data-i18n="con.f.phone">Teléfono</label>
+            <input class="form__input" id="f-phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="f-message" data-i18n="con.f.message">Mensaje</label>
+          <textarea class="form__input form__input--area" id="f-message" name="message" rows="4" data-prefill="Consulta:" data-i18n-attr="data-prefill:con.prefill"></textarea>
+        </div>
+        <p class="form__legal"><span data-i18n="con.f.legal">Usaremos sus datos para responder a su consulta.</span> <a class="form__legal-link" href="/privacidad" data-i18n="foot.privacy">Privacidad</a></p>
+        <div class="form__status" id="formStatus" role="status" aria-live="polite"></div>
+        <div class="form__submit">
+          <button class="btn btn--submit" type="submit"><span data-i18n="con.f.submit">Enviar consulta</span></button>
+          <span class="form__note" data-i18n="con.f.note">Respuesta en 24–48 h laborables.</span>
+        </div>
+      </form>
+    </section>
+  </div>
+</section>

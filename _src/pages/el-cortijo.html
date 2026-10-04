@@ -1,0 +1,90 @@
+---
+page: cortijo
+out: el-cortijo.html
+path: /el-cortijo
+title: El Cortijo · Montellano, Sevilla · Real de Cote
+description: Real de Cote es una marca de aceite de oliva virgen extra con sede en Montellano, en la campiña de Sevilla, bajo el castillo de Cote. Toda la gama, sin filtrar.
+bodyClass: page--cortijo
+nav: cortijo
+header: overlay
+crumbs: nav.home|Inicio|/ ; nav.estate|El Cortijo
+ogImage: /assets/img/foto/finca-1920.jpg
+ogImageAlt: Olivares de Montellano con el castillo de Cote al fondo
+priority: 0.7
+---
+{{#head}}
+{{fotopreload finca panel-hero}}
+{{/head}}
+{{! 1 · Panel hero: the Montellano photo (castle of Cote), graded in the landscape look of the
+    other photos (grade.py stem finca; anchored on the castle: manifest pos 80% 50%), title
+    bottom-left. }}
+<section class="panel panel--top surface--dark" aria-labelledby="est-title">
+  {{foto finca panel-hero}}
+  <div class="panel__foot" data-reveal-group>
+    <h1 class="panel__title" data-reveal="lines" id="est-title" data-i18n="nav.estate">El Cortijo</h1>
+    <div class="panel__actions" data-reveal="fade">
+      <a class="link-cta" id="est-link" href="#est-intro" aria-labelledby="est-link est-intro-title" data-i18n="home.discover">Descubrir</a>
+    </div>
+  </div>
+</section>
+
+{{! 2 · Text block: Montellano. }}
+<section class="textblock surface--light" id="est-intro" aria-labelledby="est-intro-title">
+  <div class="textblock__inner" data-reveal-group>
+    <p class="textblock__label label" data-reveal="lines" data-i18n="foot.house">La Casa</p>
+    <h2 class="textblock__title" data-reveal="lines" id="est-intro-title" data-i18n="est.title">Montellano, en la campiña de Sevilla</h2>
+    <p class="textblock__text" data-reveal="lines" data-i18n="est.p2">Real de Cote AOVE, S.L. tiene su sede en el Cortijo Cote, en la carretera de Coripe. Desde aquí atiende a distribuidores, hostelería y tiendas gourmet de España y de otros países.</p>
+    <a class="textblock__link link-cta" data-reveal="fade" id="est-intro-link" href="/profesionales" aria-labelledby="est-intro-link est-intro-title" data-i18n="nav.trade">Profesionales</a>
+  </div>
+</section>
+
+{{! 3 · The black-and-white pair of the home "Legado" block (SPEC-DP-3 §5): an old olive tree
+    (small) and the castle of Cote on its hill (large) with its CC BY-SA credit line. }}
+<div class="pair pair--legado surface--light">
+  <figure class="pair__item pair__item--small" data-reveal="img">
+    {{foto olivo-centenario pair-small}}
+  </figure>
+  <figure class="pair__item pair__item--large pair__item--credit" data-reveal-group>
+    {{foto castillo-cote pair-large reveal}}
+    {{credit castillo-cote}}
+  </figure>
+</div>
+
+{{! 4 · Quality: three text rows with small numerals on hairlines. No cards, no facts row. }}
+<section class="rows surface--light" aria-labelledby="qual-title">
+  <div class="rows__inner">
+    <div class="rows__head" data-reveal-group>
+      <p class="rows__label label" data-reveal="lines" data-i18n="qual.eyebrow">Calidad</p>
+      <h2 class="rows__title" data-reveal="lines" id="qual-title" data-i18n="qual.title">En cada botella</h2>
+    </div>
+    <ol class="rows__list">
+      <li class="rows__item" data-reveal="fade">
+        <span class="rows__no" aria-hidden="true">01</span>
+        <h3 class="rows__name" data-i18n="qual.c1t">Virgen extra</h3>
+        <p class="rows__text" data-i18n="qual.c1p">Categoría superior: obtenido directamente de aceitunas y solo por procedimientos mecánicos.</p>
+      </li>
+      <li class="rows__item" data-reveal="fade">
+        <span class="rows__no" aria-hidden="true">02</span>
+        <h3 class="rows__name" data-i18n="qual.c3t">Sin filtrar</h3>
+        <p class="rows__text" data-i18n="qual.c3p">Toda la gama se envasa sin filtrar; un ligero poso natural es normal.</p>
+      </li>
+      <li class="rows__item" data-reveal="fade">
+        <span class="rows__no" aria-hidden="true">03</span>
+        <h3 class="rows__name" data-i18n="qual.c2t">Ecológico</h3>
+        <p class="rows__text" data-i18n="qual.c2p">Nuestra referencia BIO cuenta con certificación ecológica (ES-ECO-001-AN).</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+{{! 5 · Craft panel: the collection in situ (the bottle film once it exists, else the muro photo), link to the collection. }}
+<section class="panel surface--dark" aria-labelledby="craft-title">
+{{HOME_SITU_MEDIA}}
+  <div class="panel__foot" data-reveal-group>
+    <h2 class="panel__title" data-reveal="lines" id="craft-title" data-i18n="col.title">La colección</h2>
+    <div class="panel__actions" data-reveal="fade">
+{{HOME_SITU_TOGGLE}}
+      <a class="link-cta" id="craft-link" href="/coleccion" aria-labelledby="craft-link craft-title" data-i18n="home.explore">Explorar</a>
+    </div>
+  </div>
+</section>

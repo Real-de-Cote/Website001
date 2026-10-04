@@ -1,0 +1,122 @@
+{
+ "hojiblanca": {
+  "packshot": "/assets/img/botellas/hojiblanca/packshot.webp",
+  "packshot480": "/assets/img/botellas/hojiblanca/packshot-480.webp",
+  "packshot250": "/assets/img/botellas/hojiblanca/packshot-250.webp",
+  "packshot_size": {
+   "w": 1000,
+   "h": 2000,
+   "scale": "packshot and packshot250 share camera, canvas and floor line",
+   "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca: vidrio negro con serigrafía dorada y cápsula azul, vista de frente. Imagen 3D sobre fondo transparente.",
+   "alt250_es": "Botella de 250 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca: vidrio negro con serigrafía dorada y cápsula azul, vista de frente, a la misma escala que la de 500 ml. Imagen 3D sobre fondo transparente."
+  },
+  "turntable": {
+   "frames": 36,
+   "pattern": "/assets/img/botellas/hojiblanca/giro/giro-{nn}.webp",
+   "w": 900,
+   "h": 1200,
+   "step_deg": 10,
+   "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca girando sobre sí misma: 36 vistas cada 10 grados. Imagen 3D sobre fondo transparente.",
+   "_doc": "{nn} = 00..35, two digits; frame 00 = front, the bottle turns 10 degrees per frame (camera fixed)"
+  },
+  "glb": "/assets/img/botellas/hojiblanca/modelo.glb",
+  "gallery": [
+   {
+    "file": "/assets/img/botellas/hojiblanca/estudio.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "estudio",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca: vidrio negro con serigrafía dorada y cápsula azul, de frente en un estudio oscuro. Imagen 3D.",
+    "file800": "/assets/img/botellas/hojiblanca/estudio-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/packshot.webp",
+    "w": 1000,
+    "h": 2000,
+    "kind": "packshot",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca: vidrio negro con serigrafía dorada y cápsula azul, vista de frente. Imagen 3D sobre fondo transparente."
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/tres-cuartos.webp",
+    "w": 1000,
+    "h": 2000,
+    "kind": "tres-cuartos",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca, girada unos 30 grados: escudo, marca y · HOJIBLANCA · en dorado y, a la derecha, el escudo mate tono sobre tono del vidrio. Imagen 3D sobre fondo transparente."
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/etiqueta.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "etiqueta",
+    "alt_es": "Detalle de la serigrafía dorada del frente de la botella de 500 ml: escudo, marca Real de Cote, ACEITE DE OLIVA VIRGEN EXTRA y · HOJIBLANCA ·. Imagen 3D."
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/cuello.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "cuello",
+    "alt_es": "Detalle del cuello de la botella Real de Cote de 500 ml: cápsula azul con filigrana y escudo dorados, sobre el vidrio negro. Imagen 3D."
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/dorso.webp",
+    "w": 1000,
+    "h": 2000,
+    "kind": "dorso",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca, vista del dorso: textos legales, tabla nutricional y bloque dorado con el código de barras serigrafiados en el vidrio negro. Imagen 3D sobre fondo transparente."
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/par.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "par",
+    "alt_es": "Botellas de 500 ml y 250 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca, una junto a otra a la misma escala, en un estudio oscuro. Imagen 3D.",
+    "file800": "/assets/img/botellas/hojiblanca/par-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/estudio-estampado.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "estudio-estampado",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca en un estudio oscuro; al fondo, el escudo de la botella repetido en relieve gris oscuro. Imagen 3D.",
+    "file800": "/assets/img/botellas/hojiblanca/estudio-estampado-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/estudio-claro.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "estudio-claro",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca: vidrio negro con serigrafía dorada y cápsula azul, de frente sobre fondo blanco roto. Imagen 3D.",
+    "file800": "/assets/img/botellas/hojiblanca/estudio-claro-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/real-frente.webp",
+    "w": 1200,
+    "h": 1500,
+    "kind": "real-frente",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca, de vidrio negro con cápsula azul: vista de frente, con el escudo, la marca y la variedad serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/real-dorso.webp",
+    "w": 1200,
+    "h": 1500,
+    "kind": "real-dorso",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca, de vidrio negro con cápsula azul: vista del dorso, con los textos legales, la tabla nutricional y el código de barras serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   {
+    "file": "/assets/img/botellas/hojiblanca/real-lado.webp",
+    "w": 1200,
+    "h": 1500,
+    "kind": "real-lado",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Hojiblanca, de vidrio negro con cápsula azul: vista lateral, con el escudo mate tono sobre tono en el vidrio. Fotografía real sobre fondo oscuro."
+   }
+  ]
+ }
+}

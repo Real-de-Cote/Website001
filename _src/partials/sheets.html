@@ -1,0 +1,48 @@
+{{! Full-screen menu, every viewport. "Cerrar" sits where "Menú" was in the bar. }}
+<dialog class="sheet sheet--menu" id="menuSheet" data-lenis-prevent aria-label="Menú" data-i18n-attr="aria-label:nav.menu">
+  <div class="sheet__head">
+    <button class="sheet__close" type="button" data-sheet-close data-i18n="ui.close">Cerrar</button>
+    <a class="sheet__brand" href="/"><img class="sheet__logo" src="/assets/img/logo-gold.png" {{size /assets/img/logo-gold.png}} loading="lazy" decoding="async" alt="Real de Cote · Inicio" data-i18n-attr="alt:nav.brand"></a>
+  </div>
+  <nav class="sheet__nav" aria-label="Secciones" data-i18n-attr="aria-label:nav.sections">
+    <ul class="sheet__list">
+      <li class="sheet__item"><a class="sheet__link" href="/"{{AC_HOME}} data-i18n="nav.home">Inicio</a></li>
+      <li class="sheet__item sheet__item--group">
+        <a class="sheet__link" href="/coleccion"{{AC_COLECCION}} data-i18n="nav.collection">Colección</a>
+        <ul class="sheet__sublist">
+{{MENU_PRODUCTS}}
+        </ul>
+      </li>
+      <li class="sheet__item"><a class="sheet__link" href="/el-cortijo"{{AC_CORTIJO}} data-i18n="nav.estate">El Cortijo</a></li>
+      <li class="sheet__item"><a class="sheet__link" href="/profesionales"{{AC_PROFESIONALES}} data-i18n="nav.trade">Profesionales</a></li>
+      <li class="sheet__item"><a class="sheet__link" href="/profesionales#contacto" data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+  </nav>
+  <div class="sheet__foot">
+    <div class="sheet__langrow" role="group" aria-label="Idioma" data-i18n-attr="aria-label:lang.title">
+      <button class="sheet__code" type="button" data-lang="es" lang="es" aria-pressed="true" aria-label="ES · Español">ES</button>
+      <button class="sheet__code" type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="EN · English">EN</button>
+      <button class="sheet__code" type="button" data-lang="it" lang="it" aria-pressed="false" aria-label="IT · Italiano">IT</button>
+      <button class="sheet__code" type="button" data-lang="fr" lang="fr" aria-pressed="false" aria-label="FR · Français">FR</button>
+      <button class="sheet__code" type="button" data-lang="de" lang="de" aria-pressed="false" aria-label="DE · Deutsch">DE</button>
+      <button class="sheet__code" type="button" data-lang="pt" lang="pt" aria-pressed="false" aria-label="PT · Português">PT</button>
+    </div>
+    <a class="wa-link wa-link--block" href="https://wa.me/34680408580" target="_blank" rel="noopener"><span class="wa-link__dot" aria-hidden="true"></span>WhatsApp · +34 680 40 85 80</a>
+  </div>
+</dialog>
+
+{{! Language chooser, phone only (opened by .lang-toggle). }}
+<dialog class="sheet sheet--lang" id="langSheet" data-lenis-prevent aria-labelledby="langSheetTitle">
+  <div class="sheet__head">
+    <p class="sheet__title" id="langSheetTitle" data-i18n="lang.title">Idioma</p>
+    <button class="sheet__close" type="button" data-sheet-close data-i18n="ui.close">Cerrar</button>
+  </div>
+  <ul class="sheet__langlist">
+    <li class="sheet__langitem"><button class="sheet__lang" type="button" data-lang="es" lang="es" aria-pressed="true">Español</button></li>
+    <li class="sheet__langitem"><button class="sheet__lang" type="button" data-lang="en" lang="en" aria-pressed="false">English</button></li>
+    <li class="sheet__langitem"><button class="sheet__lang" type="button" data-lang="it" lang="it" aria-pressed="false">Italiano</button></li>
+    <li class="sheet__langitem"><button class="sheet__lang" type="button" data-lang="fr" lang="fr" aria-pressed="false">Français</button></li>
+    <li class="sheet__langitem"><button class="sheet__lang" type="button" data-lang="de" lang="de" aria-pressed="false">Deutsch</button></li>
+    <li class="sheet__langitem"><button class="sheet__lang" type="button" data-lang="pt" lang="pt" aria-pressed="false">Português</button></li>
+  </ul>
+</dialog>

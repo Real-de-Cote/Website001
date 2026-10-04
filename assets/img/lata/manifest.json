@@ -1,0 +1,108 @@
+{
+  "generator": "assets/lata/make_lata.py",
+  "base": "/assets/img/lata/",
+  "notes": [
+    "escena*, estuche*, vertido*: the client's illustrative (AI-generated) studio scene, cleaned and upscaled (the garbled crest on the lying tin is replaced by the real logo); never caption as a real product photo of a finished range, nor as 'our olive grove/estate'. escena-sq continues the studio wall/floor to fit a square.",
+    "mini/clasica/maxi: transparent front packshots rendered at one shared scale (px_per_mm). For true relative size give each image a height proportional to relative_height and align their bottoms; baseline_px is the row where the tin meets the floor (the contact shadow sits below it).",
+    "Capacities are unknown: render_mm are drawing proportions, not specifications."
+  ],
+  "files": {
+    "escena.webp": {
+      "w": 2048,
+      "h": 1554,
+      "bytes": 97166
+    },
+    "escena.jpg": {
+      "w": 2048,
+      "h": 1554,
+      "bytes": 262490
+    },
+    "escena-800.webp": {
+      "w": 800,
+      "h": 607,
+      "bytes": 27644
+    },
+    "escena-sq.webp": {
+      "w": 1000,
+      "h": 1000,
+      "bytes": 48582
+    },
+    "estuche.webp": {
+      "w": 900,
+      "h": 1200,
+      "bytes": 30932
+    },
+    "estuche-800.webp": {
+      "w": 800,
+      "h": 1067,
+      "bytes": 29272
+    },
+    "vertido.webp": {
+      "w": 1200,
+      "h": 676,
+      "bytes": 33630
+    },
+    "vertido-800.webp": {
+      "w": 800,
+      "h": 451,
+      "bytes": 19648
+    },
+    "mini.webp": {
+      "w": 639,
+      "h": 838,
+      "transparent": true,
+      "px_per_mm": 6.0,
+      "baseline_px": 783.2,
+      "relative_height": 0.5977,
+      "render_mm": {
+        "w": 76.0,
+        "d": 47.0,
+        "h": 98.0
+      },
+      "bytes": 22804
+    },
+    "clasica.webp": {
+      "w": 723,
+      "h": 1106,
+      "transparent": true,
+      "px_per_mm": 6.0,
+      "baseline_px": 1051.5,
+      "relative_height": 0.7889,
+      "render_mm": {
+        "w": 90.0,
+        "d": 55.0,
+        "h": 142.0
+      },
+      "bytes": 28412
+    },
+    "maxi.webp": {
+      "w": 843,
+      "h": 1402,
+      "transparent": true,
+      "px_per_mm": 6.0,
+      "baseline_px": 1347.2,
+      "relative_height": 1.0,
+      "render_mm": {
+        "w": 110.0,
+        "d": 67.0,
+        "h": 190.0
+      },
+      "bytes": 33734
+    },
+    "trio.webp": {
+      "w": 1761,
+      "h": 1632,
+      "transparent": true,
+      "px_per_mm": 6.0,
+      "order": "maxi, clasica, mini (left to right)",
+      "bytes": 87566
+    },
+    "trio-1000.webp": {
+      "w": 1000,
+      "h": 927,
+      "transparent": true,
+      "px_per_mm": 3.4072,
+      "bytes": 52384
+    }
+  }
+}

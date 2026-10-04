@@ -1,0 +1,73 @@
+---
+template: producto
+bodyClass: page--producto
+nav: coleccion
+header: overlay
+priority: 0.8
+---
+{{#head}}
+<link rel="preload" as="image" type="image/webp" href="{{P_IMG}}" imagesrcset="{{P_IMG_SET}}" imagesizes="{{P_IMG_SIZES}}" fetchpriority="high">
+{{! The info panel is centred in its column (≥1024): painted half-parsed, it would re-centre as
+    the accordions arrive (a layout shift on a slow first visit). Chromium holds the first paint
+    until its end marker is parsed; other browsers ignore it. }}
+<link rel="expect" href="#pdp-info-end" blocking="render">
+{{/head}}
+{{! 1 · Split hero (SPEC-DP-2 §2.1): the bottle viewer on the stage (left, 60 %), the info
+    panel (right, 40 %). Split from 1024px; below that stacked, media first. The stage is
+    dark, the info panel light (off-white in FONDO 'mixto', dark in 'negro'). }}
+<section class="pdp surface--dark" aria-labelledby="pdp-title">
+  <div class="pdp-stage surface--dark" data-header-zone>
+{{VIEWER}}
+  </div>
+  <div class="pdp-info surface--light">
+    <div class="pdp-info__inner" data-reveal-group>
+      <div class="pdp-info__head" data-reveal="lines">
+        <p class="pdp-info__no label"><span data-i18n="pdp.no">N.º</span> {{P_NO}}</p>
+        <h1 class="pdp-info__name" id="pdp-title">{{P_NAME}}</h1>
+        {{BIO_TAG}}
+      </div>
+      <p class="pdp-info__legal" data-reveal="lines" data-ficha="denomV">{{T_DENOMV}}</p>
+      <a class="pdp-info__back link-cta" data-reveal="fade" href="/coleccion" data-i18n="pdp.back">Volver a la colección</a>
+      <ul class="chips pdp-info__formats" data-reveal="fade" aria-label="Formatos" data-i18n-attr="aria-label:pdp.formats">{{P_CHIPS}}</ul>
+      <a class="btn btn--block pdp-info__cta" data-reveal="fade" href="/profesionales?producto={{P_ID}}#contacto" data-amazon="{{P_ID}}"><span data-ficha="enquire">{{T_ENQUIRE}}</span></a>
+      <a class="wa-link wa-link--text pdp-info__wa" data-reveal="fade" href="{{WA_HREF}}" target="_blank" rel="noopener" data-wa-name="{{P_NAME}}"><span class="wa-link__dot" aria-hidden="true"></span>WhatsApp</a>
+{{ACCORDIONS}}
+      <span id="pdp-info-end" hidden></span>
+    </div>
+  </div>
+</section>
+
+{{! 2 · Panel "La botella": estudio-estampado.webp full-bleed; left out while it does not exist. }}
+{{PDP_BOTTLE}}
+
+{{! 3 · Text block "La variedad": name · tile line, a short compliant paragraph, link to the sheet. }}
+<section class="textblock surface--light" aria-labelledby="pdp-variety-title">
+  <div class="textblock__inner" data-reveal-group>
+    <p class="textblock__label label" data-reveal="lines" data-i18n="pdp.variety">La variedad</p>
+    <h2 class="textblock__title" data-reveal="lines" id="pdp-variety-title">{{P_NAME}} · <span data-i18n="{{P_TILE_LINE_KEY}}">{{P_TILE_LINE}}</span></h2>
+    <p class="textblock__text" data-reveal="lines" data-i18n="pdp.var.{{P_ID}}">{{P_VARIETY_TEXT}}</p>
+    <a class="textblock__link link-cta" data-reveal="fade" id="pdp-variety-link" href="#acc-tech" aria-labelledby="pdp-variety-link pdp-variety-title" data-i18n="pdp.sheet">Ficha técnica</a>
+  </div>
+</section>
+
+{{! 4 · Pair: cuello (small) and etiqueta (large). Left out until the files exist. }}
+{{PDP_PAIR}}
+
+{{! 5 · Split "Usos": par.webp, else the muro photo zoomed on this variety's two bottles (left),
+    the product line and its uses (right). Storage stays in the "Conservación y usos" accordion.
+    A light block (DP's product splits: the photo beside a white text panel): in 'mixto' the
+    text half is off-white, so it does not read as a black hole between the light pair and the
+    two dark link panels. }}
+<section class="split{{PDP_SPLIT_MOD}} surface--light" aria-labelledby="pdp-uses-title">
+  <figure class="split__media" data-reveal="img">
+{{PDP_SPLIT_IMG}}
+  </figure>
+  <div class="split__body" data-reveal-group>
+    <p class="split__label label" data-reveal="lines"><span data-i18n="pdp.no">N.º</span> {{P_NO}} · {{P_NAME}}</p>
+    <h2 class="split__title" data-reveal="lines" id="pdp-uses-title" data-ficha="sUses">Usos</h2>
+    <p class="split__text" data-reveal="lines" data-ficha="uses.{{P_ID}}">{{P_USES}}</p>
+  </div>
+</section>
+
+{{! 6 · Link panels: previous and next product (wrap-around); side by side while both are packshots. }}
+{{PDP_LINKS}}

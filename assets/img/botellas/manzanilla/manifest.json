@@ -1,0 +1,122 @@
+{
+ "manzanilla": {
+  "packshot": "/assets/img/botellas/manzanilla/packshot.webp",
+  "packshot480": "/assets/img/botellas/manzanilla/packshot-480.webp",
+  "packshot250": "/assets/img/botellas/manzanilla/packshot-250.webp",
+  "packshot_size": {
+   "w": 1000,
+   "h": 2000,
+   "scale": "packshot and packshot250 share camera, canvas and floor line",
+   "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla: vidrio negro con serigrafía dorada y cápsula negra, vista de frente. Imagen 3D sobre fondo transparente.",
+   "alt250_es": "Botella de 250 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla: vidrio negro con serigrafía dorada y cápsula negra, vista de frente, a la misma escala que la de 500 ml. Imagen 3D sobre fondo transparente."
+  },
+  "turntable": {
+   "frames": 36,
+   "pattern": "/assets/img/botellas/manzanilla/giro/giro-{nn}.webp",
+   "w": 900,
+   "h": 1200,
+   "step_deg": 10,
+   "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla girando sobre sí misma: 36 vistas cada 10 grados. Imagen 3D sobre fondo transparente.",
+   "_doc": "{nn} = 00..35, two digits; frame 00 = front, the bottle turns 10 degrees per frame (camera fixed)"
+  },
+  "glb": "/assets/img/botellas/manzanilla/modelo.glb",
+  "gallery": [
+   {
+    "file": "/assets/img/botellas/manzanilla/estudio.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "estudio",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla: vidrio negro con serigrafía dorada y cápsula negra, de frente en un estudio oscuro. Imagen 3D.",
+    "file800": "/assets/img/botellas/manzanilla/estudio-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/packshot.webp",
+    "w": 1000,
+    "h": 2000,
+    "kind": "packshot",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla: vidrio negro con serigrafía dorada y cápsula negra, vista de frente. Imagen 3D sobre fondo transparente."
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/tres-cuartos.webp",
+    "w": 1000,
+    "h": 2000,
+    "kind": "tres-cuartos",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla, girada unos 30 grados: escudo, marca y · MANZANILLA · en dorado y, a la derecha, el escudo mate tono sobre tono del vidrio. Imagen 3D sobre fondo transparente."
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/etiqueta.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "etiqueta",
+    "alt_es": "Detalle de la serigrafía dorada del frente de la botella de 500 ml: escudo, marca Real de Cote, ACEITE DE OLIVA VIRGEN EXTRA y · MANZANILLA ·. Imagen 3D."
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/cuello.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "cuello",
+    "alt_es": "Detalle del cuello de la botella Real de Cote de 500 ml: cápsula negra con filigrana y escudo dorados, sobre el vidrio negro. Imagen 3D."
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/dorso.webp",
+    "w": 1000,
+    "h": 2000,
+    "kind": "dorso",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla, vista del dorso: textos legales, tabla nutricional y bloque dorado con el código de barras serigrafiados en el vidrio negro. Imagen 3D sobre fondo transparente."
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/par.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "par",
+    "alt_es": "Botellas de 500 ml y 250 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla, una junto a otra a la misma escala, en un estudio oscuro. Imagen 3D.",
+    "file800": "/assets/img/botellas/manzanilla/par-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/estudio-estampado.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "estudio-estampado",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla en un estudio oscuro; al fondo, el escudo de la botella repetido en relieve gris oscuro. Imagen 3D.",
+    "file800": "/assets/img/botellas/manzanilla/estudio-estampado-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/estudio-claro.webp",
+    "w": 1600,
+    "h": 2000,
+    "kind": "estudio-claro",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla: vidrio negro con serigrafía dorada y cápsula negra, de frente sobre fondo blanco roto. Imagen 3D.",
+    "file800": "/assets/img/botellas/manzanilla/estudio-claro-800.webp",
+    "w800": 800,
+    "h800": 1000
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/real-frente.webp",
+    "w": 1200,
+    "h": 1500,
+    "kind": "real-frente",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla, de vidrio negro con cápsula negra: vista de frente, con el escudo, la marca y la variedad serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/real-dorso.webp",
+    "w": 1200,
+    "h": 1500,
+    "kind": "real-dorso",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla, de vidrio negro con cápsula negra: vista del dorso, con los textos legales, la tabla nutricional y el código de barras serigrafiados en dorado. Fotografía real sobre fondo oscuro."
+   },
+   {
+    "file": "/assets/img/botellas/manzanilla/real-lado.webp",
+    "w": 1200,
+    "h": 1500,
+    "kind": "real-lado",
+    "alt_es": "Botella de 500 ml de aceite de oliva virgen extra Real de Cote, variedad Manzanilla, de vidrio negro con cápsula negra: vista lateral, con el escudo mate tono sobre tono en el vidrio. Fotografía real sobre fondo oscuro."
+   }
+  ]
+ }
+}
