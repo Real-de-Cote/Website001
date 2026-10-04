@@ -113,7 +113,7 @@ const vm = require('vm');
 const ROOT = path.resolve(__dirname, '..');
 const SRC = path.join(ROOT, '_src');
 const ORIGIN = 'https://www.realdecote.es';
-const V = 'maison-12';                      // asset version (?v=) of CSS/JS and of the media below: bump on every pass that touches css/, js/ or the media (30-day / 7-day caches)
+const V = 'maison-13';                      // asset version (?v=) of CSS/JS and of the media below: bump on every pass that touches css/, js/ or the media (30-day / 7-day caches)
 /* Media whose files keep their names when they are re-made (the drone film and
    posters, the graded editorial photos) also carry ?v=V in every page: written
    by the build over the finished HTML (versionMedia), so a re-grade reaches
