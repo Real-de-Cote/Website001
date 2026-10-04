@@ -12,7 +12,7 @@
 
    Output (committed: the host does not build)
      index.html, coleccion.html, coleccion/<slug>.html, coleccion/lata.html,
-     el-cortijo.html, profesionales.html, privacidad.html, aviso-legal.html,
+     la-finca.html, profesionales.html, privacidad.html, aviso-legal.html,
      404.html, sitemap.xml, js/i18n.min.js, js/ficha.min.js, js/main.min.js
      (the pages load these minified copies; edit only js/<name>.js)
 
@@ -113,7 +113,7 @@ const vm = require('vm');
 const ROOT = path.resolve(__dirname, '..');
 const SRC = path.join(ROOT, '_src');
 const ORIGIN = 'https://www.realdecote.es';
-const V = 'maison-9';                      // asset version (?v=) of CSS/JS and of the media below: bump on every pass that touches css/, js/ or the media (30-day / 7-day caches)
+const V = 'maison-10';                      // asset version (?v=) of CSS/JS and of the media below: bump on every pass that touches css/, js/ or the media (30-day / 7-day caches)
 /* Media whose files keep their names when they are re-made (the drone film and
    posters, the graded editorial photos) also carry ?v=V in every page: written
    by the build over the finished HTML (versionMedia), so a re-grade reaches
@@ -279,7 +279,7 @@ LATENT_KEYS['pdp.seeCol'] = 'Ver la colección';
    authored it in the HTML). Listed as _changed in the --keys handoff so the
    translations can be reviewed. */
 const ES_BEFORE = {
-  'nav.estate': 'El cortijo',
+  'nav.estate': 'La Finca',
   'foot.house': 'Casa'
 };
 
@@ -1246,7 +1246,7 @@ const ORG = {
   description: 'Marca de aceite de oliva virgen extra con sede en Montellano (Sevilla). Distribución nacional y exportación.',
   email: 'info@realdecote.es',
   telephone: '+34680408580',
-  address: { '@type': 'PostalAddress', streetAddress: 'Ctra. de Coripe, km 2,3 — Cortijo Cote', addressLocality: 'Montellano', addressRegion: 'Sevilla', postalCode: '41770', addressCountry: 'ES' },
+  address: { '@type': 'PostalAddress', streetAddress: 'Ctra. de Coripe, km 2,3 — Finca Cote', addressLocality: 'Montellano', addressRegion: 'Sevilla', postalCode: '41770', addressCountry: 'ES' },
   sameAs: ['https://www.instagram.com/realdecote']
 };
 function breadcrumbLd(crumbs, pagePath) {
@@ -1333,7 +1333,7 @@ function buildPage(src, extraVars) {
     HEADER_MODE: headerMode,
     AC_HOME: isHome ? ' aria-current="page"' : '',
     AC_COLECCION: navAttr(meta, 'coleccion', '/coleccion'),
-    AC_CORTIJO: navAttr(meta, 'cortijo', '/el-cortijo'),
+    AC_CORTIJO: navAttr(meta, 'cortijo', '/la-finca'),
     AC_PROFESIONALES: navAttr(meta, 'profesionales', '/profesionales')
   }, extraVars || {});
   const crumbs = meta._crumbs || parseCrumbs(meta.crumbs);
@@ -1776,7 +1776,7 @@ built.forEach(function (b) {
 /* sitemap                                                             */
 /* ------------------------------------------------------------------ */
 const today = new Date().toISOString().slice(0, 10);
-const order = ['/', '/coleccion'].concat(F.products.map(function (p) { return '/coleccion/' + p.slug; }), ['/coleccion/lata', '/el-cortijo', '/profesionales']);
+const order = ['/', '/coleccion'].concat(F.products.map(function (p) { return '/coleccion/' + p.slug; }), ['/coleccion/lata', '/la-finca', '/profesionales']);
 const inMap = built.filter(function (b) { return b.path && !/noindex/.test(b.meta.robots || ''); })
   .sort(function (a, b) {
     const ia = order.indexOf(a.path), ib = order.indexOf(b.path);

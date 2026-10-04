@@ -34,7 +34,7 @@
   --------------------------------------------------------------- */
   var OLD_ANCHORS = {
     "#coleccion": "/coleccion",
-    "#cortijo": "/el-cortijo",
+    "#cortijo": "/la-finca",
     "#profesionales": "/profesionales",
     "#contacto": "/profesionales#contacto"
   };
@@ -218,7 +218,7 @@
     if (PAGE === "home") href = "/";
     else if (PAGE === "coleccion") href = "/coleccion";
     else if (PAGE === "lata" || PAGE.indexOf("producto-") === 0) { href = "/coleccion"; exact = false; }
-    else if (PAGE === "cortijo") href = "/el-cortijo";
+    else if (PAGE === "cortijo") href = "/la-finca";
     else if (PAGE === "profesionales") href = "/profesionales";
     if (!href) return;
     const links = $$(".sheet__link");

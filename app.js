@@ -312,7 +312,7 @@ app.post('/api/contact', express.json({ limit: '32kb' }), async function (req, r
      /coleccion              coleccion.html   (the coleccion/ FOLDER is never
                                                used for this URL: no dir redirect)
      /coleccion/manzanilla   coleccion/manzanilla.html
-     /el-cortijo, /profesionales, /privacidad, /aviso-legal, …
+     /la-finca, /profesionales, /privacidad, /aviso-legal, …
 
    Anything that names an existing page in another spelling gets ONE 301 to
    the canonical form (query string kept): trailing slash (/coleccion/),
@@ -367,6 +367,8 @@ app.use(async function pages(req, res, next) {
     if (canon === '' || canon === '/index') canon = '/';
 
     if (canon === '/404') return notFound(req, res);
+    // Renamed pages keep their old address working (one permanent redirect).
+    if (canon === '/el-cortijo') canon = '/la-finca';
 
     const rel = await resolvePage(canon);
     if (!rel) return htmlForm ? next() : notFound(req, res);

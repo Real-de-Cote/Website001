@@ -25,7 +25,7 @@
    - the stock and Commons photographs (leaf, olive rows, old olive tree,
      castle of Cote, gastronomy row) are illustrative: never "our" grove,
      castle or kitchen, never a chef or restaurant using Real de Cote.
-   - "El Cortijo" (the page and the place) stays as it is in every language.
+   - "La Finca" (the page) and "Finca Cote" (the place) stay as they are in every language; never "cortijo" (client, 2026-10-04).
    - "La Lata" (the tin collection) and the model names Mini · Clásica ·
      Maxi are proper names and stay as they are in every language.
    - French: a no-break space (\u00a0) goes before : ; ? !
@@ -52,7 +52,7 @@ window.RDC_I18N = {
                 desc: "Real de Cote BIO: aceite de oliva virgen extra, coupage ecológico, sin filtrar. En 500 ml y 250 ml. Ficha técnica con información nutricional, formatos y conservación." },
       "lata": { title: "La Lata Real de Cote · Próximamente",
                 desc: "Próximamente, La Lata Real de Cote: una colección en lata negra con el escudo en oro y estuche para regalo, en tres modelos: Mini, Clásica y Maxi." },
-      "cortijo": { title: "El Cortijo · Montellano, Sevilla · Real de Cote",
+      "cortijo": { title: "La Finca · Montellano, Sevilla · Real de Cote",
                 desc: "Real de Cote es una marca de aceite de oliva virgen extra con sede en Montellano, en la campiña de Sevilla, bajo el castillo de Cote. Toda la gama, sin filtrar." },
       "profesionales": { title: "Profesionales y exportación · Real de Cote",
                 desc: "Distribución, hostelería, tiendas gourmet y marca blanca. Envío mundial EXW Sevilla, pedido mínimo de 1 palé por referencia. Solicite catálogo, tarifa 2026 y muestras." },
@@ -80,7 +80,7 @@ window.RDC_I18N = {
                 desc: "Real de Cote BIO: extra virgin olive oil, organic coupage, unfiltered. In 500 ml and 250 ml. Technical sheet with nutrition information, sizes and storage." },
       "lata": { title: "La Lata Real de Cote · Coming soon",
                 desc: "Coming soon: La Lata Real de Cote, a collection in black tins with the crest in gold and a gift box, in three models — Mini, Clásica and Maxi." },
-      "cortijo": { title: "El Cortijo · Montellano, Seville · Real de Cote",
+      "cortijo": { title: "La Finca · Montellano, Seville · Real de Cote",
                 desc: "Real de Cote is an extra virgin olive oil brand based in Montellano, in the Seville countryside, beneath the castle of Cote. The whole range, unfiltered." },
       "profesionales": { title: "Trade & export · Real de Cote",
                 desc: "Distribution, hospitality, fine-food retail and private label. Worldwide shipping EXW Seville, minimum order of 1 pallet per reference. Request our catalogue, 2026 price list and samples." },
@@ -108,7 +108,7 @@ window.RDC_I18N = {
                 desc: "Real de Cote BIO: olio extra vergine di oliva, coupage biologico, non filtrato. Da 500 ml e 250 ml. Scheda tecnica con informazioni nutrizionali, formati e conservazione." },
       "lata": { title: "La Lata Real de Cote · Prossimamente",
                 desc: "Prossimamente La Lata Real de Cote: una collezione in latta nera con lo stemma in oro e astuccio regalo, in tre modelli: Mini, Clásica e Maxi." },
-      "cortijo": { title: "El Cortijo · Montellano, Siviglia · Real de Cote",
+      "cortijo": { title: "La Finca · Montellano, Siviglia · Real de Cote",
                 desc: "Real de Cote è un marchio di olio extra vergine di oliva con sede a Montellano, nella campagna di Siviglia, ai piedi del castello di Cote. Tutta la gamma, non filtrata." },
       "profesionales": { title: "Professionisti ed export · Real de Cote",
                 desc: "Distribuzione, ristorazione, negozi gourmet e private label. Spedizioni in tutto il mondo EXW Siviglia, ordine minimo di 1 pallet per referenza. Richieda catalogo, listino 2026 e campioni." },
@@ -136,7 +136,7 @@ window.RDC_I18N = {
                 desc: "Real de Cote BIO\u00a0: huile d'olive vierge extra, coupage biologique, non filtrée. En 500 ml et 250 ml. Fiche technique avec informations nutritionnelles, formats et conservation." },
       "lata": { title: "La Lata Real de Cote · Prochainement",
                 desc: "Prochainement, La Lata Real de Cote\u00a0: une collection en boîte métallique noire ornée de l'écusson doré, avec coffret cadeau, en trois modèles — Mini, Clásica et Maxi." },
-      "cortijo": { title: "El Cortijo · Montellano, Séville · Real de Cote",
+      "cortijo": { title: "La Finca · Montellano, Séville · Real de Cote",
                 desc: "Real de Cote est une marque d'huile d'olive vierge extra basée à Montellano, dans la campagne sévillane, au pied du château de Cote. Toute la gamme, non filtrée." },
       "profesionales": { title: "Professionnels et export · Real de Cote",
                 desc: "Distribution, restauration, épiceries fines et marque de distributeur. Expédition dans le monde entier EXW Séville, commande minimum d'une palette par référence. Demandez catalogue, tarifs 2026 et échantillons." },
@@ -164,7 +164,7 @@ window.RDC_I18N = {
                 desc: "Real de Cote BIO: natives Olivenöl extra, Bio-Cuvée, ungefiltert. In 500 ml und 250 ml. Technisches Datenblatt mit Nährwertangaben, Formaten und Lagerhinweisen." },
       "lata": { title: "La Lata Real de Cote · Demnächst",
                 desc: "Demnächst: La Lata Real de Cote, eine Kollektion in schwarzen Dosen mit dem Wappen in Gold und passender Geschenkbox, in drei Modellen – Mini, Clásica und Maxi." },
-      "cortijo": { title: "El Cortijo · Montellano, Sevilla · Real de Cote",
+      "cortijo": { title: "La Finca · Montellano, Sevilla · Real de Cote",
                 desc: "Real de Cote ist eine Marke für natives Olivenöl extra mit Sitz in Montellano, auf dem Land bei Sevilla, unterhalb der Burg von Cote. Das gesamte Sortiment, ungefiltert." },
       "profesionales": { title: "Geschäftskunden und Export · Real de Cote",
                 desc: "Großhandel, Gastronomie, Feinkost und Eigenmarken. Weltweiter Versand EXW Sevilla, Mindestbestellung 1 Palette pro Referenz. Fordern Sie Katalog, Preisliste 2026 und Muster an." },
@@ -192,7 +192,7 @@ window.RDC_I18N = {
                 desc: "Real de Cote BIO: azeite virgem extra, coupage biológico, não filtrado. Em 500 ml e 250 ml. Ficha técnica com informação nutricional, formatos e conservação." },
       "lata": { title: "La Lata Real de Cote · Brevemente",
                 desc: "Brevemente, La Lata Real de Cote: uma coleção em lata preta com o brasão dourado e caixa de oferta, em três modelos: Mini, Clásica e Maxi." },
-      "cortijo": { title: "El Cortijo · Montellano, Sevilha · Real de Cote",
+      "cortijo": { title: "La Finca · Montellano, Sevilha · Real de Cote",
                 desc: "A Real de Cote é uma marca de azeite virgem extra sediada em Montellano, no campo de Sevilha, aos pés do castelo de Cote. Toda a gama, não filtrada." },
       "profesionales": { title: "Profissionais e exportação · Real de Cote",
                 desc: "Distribuição, restauração, lojas gourmet e marca própria. Envio para todo o mundo EXW Sevilha, encomenda mínima de 1 palete por referência. Peça catálogo, tabela de preços 2026 e amostras." },
@@ -231,7 +231,7 @@ window.RDC_I18N = {
     en: {
       /* shared chrome */
       "skip": "Skip to content",
-      "nav.home": "Home", "nav.collection": "Collection", "nav.estate": "El Cortijo", "nav.trade": "Trade", "nav.contact": "Contact",
+      "nav.home": "Home", "nav.collection": "Collection", "nav.estate": "La Finca", "nav.trade": "Trade", "nav.contact": "Contact",
       "nav.brand": "Real de Cote · Home", "nav.menu": "Menu", "nav.sections": "Sections",
       "lang.title": "Language",
       "ui.close": "Close",
@@ -300,9 +300,9 @@ window.RDC_I18N = {
       "lata.cta.title": "Interested in La Lata?",
       "lata.cta.text": "Leave us your details and we will write to you as soon as it is available.",
 
-      /* El Cortijo */
+      /* La Finca */
       "est.title": "Montellano, in the Seville countryside",
-      "est.p2": "Real de Cote AOVE, S.L. is based at Cortijo Cote, on the road to Coripe. From here it serves distributors, hospitality and fine-food shops in Spain and abroad.",
+      "est.p2": "Real de Cote AOVE, S.L. is based at Finca Cote, on the road to Coripe. From here it serves distributors, hospitality and fine-food shops in Spain and abroad.",
       "qual.eyebrow": "Quality", "qual.title": "In every bottle",
       "qual.c1t": "Extra virgin", "qual.c1p": "Superior category: obtained directly from olives and solely by mechanical means.",
       "qual.c2t": "Organic", "qual.c2p": "Our BIO reference is certified organic (ES-ECO-001-AN).",
@@ -371,7 +371,7 @@ window.RDC_I18N = {
     it: {
       /* shared chrome */
       "skip": "Vai al contenuto",
-      "nav.home": "Home", "nav.collection": "Collezione", "nav.estate": "El Cortijo", "nav.trade": "Professionisti", "nav.contact": "Contatti",
+      "nav.home": "Home", "nav.collection": "Collezione", "nav.estate": "La Finca", "nav.trade": "Professionisti", "nav.contact": "Contatti",
       "nav.brand": "Real de Cote · Home", "nav.menu": "Menu", "nav.sections": "Sezioni",
       "lang.title": "Lingua",
       "ui.close": "Chiudi",
@@ -440,9 +440,9 @@ window.RDC_I18N = {
       "lata.cta.title": "Le interessa La Lata?",
       "lata.cta.text": "Ci lasci i suoi recapiti: le scriveremo non appena sarà disponibile.",
 
-      /* El Cortijo */
+      /* La Finca */
       "est.title": "Montellano, nella campagna di Siviglia",
-      "est.p2": "Real de Cote AOVE, S.L. ha sede al Cortijo Cote, sulla strada per Coripe. Da qui serve distributori, ristorazione e negozi gourmet in Spagna e all'estero.",
+      "est.p2": "Real de Cote AOVE, S.L. ha sede alla Finca Cote, sulla strada per Coripe. Da qui serve distributori, ristorazione e negozi gourmet in Spagna e all'estero.",
       "qual.eyebrow": "Qualità", "qual.title": "In ogni bottiglia",
       "qual.c1t": "Extra vergine", "qual.c1p": "Categoria superiore: ottenuto direttamente dalle olive e unicamente mediante procedimenti meccanici.",
       "qual.c2t": "Biologico", "qual.c2p": "La nostra referenza BIO ha la certificazione biologica (ES-ECO-001-AN).",
@@ -511,7 +511,7 @@ window.RDC_I18N = {
     fr: {
       /* shared chrome */
       "skip": "Aller au contenu",
-      "nav.home": "Accueil", "nav.collection": "Collection", "nav.estate": "El Cortijo", "nav.trade": "Professionnels", "nav.contact": "Contact",
+      "nav.home": "Accueil", "nav.collection": "Collection", "nav.estate": "La Finca", "nav.trade": "Professionnels", "nav.contact": "Contact",
       "nav.brand": "Real de Cote · Accueil", "nav.menu": "Menu", "nav.sections": "Rubriques",
       "lang.title": "Langue",
       "ui.close": "Fermer",
@@ -580,9 +580,9 @@ window.RDC_I18N = {
       "lata.cta.title": "La Lata vous intéresse\u00a0?",
       "lata.cta.text": "Laissez-nous vos coordonnées et nous vous écrirons dès qu'elle sera disponible.",
 
-      /* El Cortijo */
+      /* La Finca */
       "est.title": "Montellano, dans la campagne sévillane",
-      "est.p2": "Real de Cote AOVE, S.L. a son siège au Cortijo Cote, sur la route de Coripe. C'est d'ici qu'elle sert distributeurs, restaurateurs et épiceries fines, en Espagne comme à l'étranger.",
+      "est.p2": "Real de Cote AOVE, S.L. a son siège à la Finca Cote, sur la route de Coripe. C'est d'ici qu'elle sert distributeurs, restaurateurs et épiceries fines, en Espagne comme à l'étranger.",
       "qual.eyebrow": "Qualité", "qual.title": "Dans chaque bouteille",
       "qual.c1t": "Vierge extra", "qual.c1p": "Catégorie supérieure\u00a0: obtenue directement des olives et uniquement par des procédés mécaniques.",
       "qual.c2t": "Biologique", "qual.c2p": "Notre référence BIO est certifiée biologique (ES-ECO-001-AN).",
@@ -651,7 +651,7 @@ window.RDC_I18N = {
     de: {
       /* shared chrome */
       "skip": "Zum Inhalt springen",
-      "nav.home": "Startseite", "nav.collection": "Kollektion", "nav.estate": "El Cortijo", "nav.trade": "Geschäftskunden", "nav.contact": "Kontakt",
+      "nav.home": "Startseite", "nav.collection": "Kollektion", "nav.estate": "La Finca", "nav.trade": "Geschäftskunden", "nav.contact": "Kontakt",
       "nav.brand": "Real de Cote · Startseite", "nav.menu": "Menü", "nav.sections": "Bereiche",
       "lang.title": "Sprache",
       "ui.close": "Schließen",
@@ -720,9 +720,9 @@ window.RDC_I18N = {
       "lata.cta.title": "Interesse an La Lata?",
       "lata.cta.text": "Hinterlassen Sie uns Ihre Kontaktdaten – wir schreiben Ihnen, sobald sie erhältlich ist.",
 
-      /* El Cortijo */
+      /* La Finca */
       "est.title": "Montellano, auf dem Land bei Sevilla",
-      "est.p2": "Die Real de Cote AOVE, S.L. hat ihren Sitz im Cortijo Cote an der Landstraße nach Coripe. Von hier aus betreut sie Großhändler, Gastronomie und Feinkostgeschäfte in Spanien und im Ausland.",
+      "est.p2": "Die Real de Cote AOVE, S.L. hat ihren Sitz auf der Finca Cote an der Landstraße nach Coripe. Von hier aus betreut sie Großhändler, Gastronomie und Feinkostgeschäfte in Spanien und im Ausland.",
       "qual.eyebrow": "Qualität", "qual.title": "In jeder Flasche",
       "qual.c1t": "Nativ extra", "qual.c1p": "Olivenöl erster Güteklasse – direkt aus Oliven ausschließlich mit mechanischen Verfahren gewonnen.",
       "qual.c2t": "Ökologisch", "qual.c2p": "Unsere BIO-Referenz ist ökologisch zertifiziert (ES-ECO-001-AN).",
@@ -791,7 +791,7 @@ window.RDC_I18N = {
     pt: {
       /* shared chrome */
       "skip": "Saltar para o conteúdo",
-      "nav.home": "Início", "nav.collection": "Coleção", "nav.estate": "El Cortijo", "nav.trade": "Profissionais", "nav.contact": "Contacto",
+      "nav.home": "Início", "nav.collection": "Coleção", "nav.estate": "La Finca", "nav.trade": "Profissionais", "nav.contact": "Contacto",
       "nav.brand": "Real de Cote · Início", "nav.menu": "Menu", "nav.sections": "Secções",
       "lang.title": "Língua",
       "ui.close": "Fechar",
@@ -860,9 +860,9 @@ window.RDC_I18N = {
       "lata.cta.title": "Tem interesse em La Lata?",
       "lata.cta.text": "Deixe-nos os seus contactos e escrever-lhe-emos assim que estiver disponível.",
 
-      /* El Cortijo */
+      /* La Finca */
       "est.title": "Montellano, no campo de Sevilha",
-      "est.p2": "A Real de Cote AOVE, S.L. tem sede no Cortijo Cote, na estrada de Coripe. É daqui que atende distribuidores, restauração e lojas gourmet em Espanha e noutros países.",
+      "est.p2": "A Real de Cote AOVE, S.L. tem sede na Finca Cote, na estrada de Coripe. É daqui que atende distribuidores, restauração e lojas gourmet em Espanha e noutros países.",
       "qual.eyebrow": "Qualidade", "qual.title": "Em cada garrafa",
       "qual.c1t": "Virgem extra", "qual.c1p": "Categoria superior: obtido diretamente a partir de azeitonas e unicamente por processos mecânicos.",
       "qual.c2t": "Biológico", "qual.c2p": "A nossa referência BIO tem certificação biológica (ES-ECO-001-AN).",
