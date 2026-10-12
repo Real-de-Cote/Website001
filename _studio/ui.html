@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.ico">
+<title>Real de Cote · Studio</title>
+<style>
+:root{--bg:#0b0b0b;--panel:#141414;--line:#2a2a2a;--tx:#f2efe8;--mut:#8d8a83;--gold:#c9a45c;--ok:#6fbf8b;--err:#e0706b;--warn:#d9b45a}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--tx);font:14px/1.45 "Helvetica Neue",Arial,sans-serif;min-height:100vh}
+header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+h1{font-size:13px;letter-spacing:.32em;text-transform:uppercase;font-weight:500}
+h1 span{color:var(--gold)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+button,.btn{background:none;border:1px solid var(--line);color:var(--tx);padding:9px 16px;font:inherit;font-size:11px;letter-spacing:.16em;text-transform:uppercase;cursor:pointer;transition:.15s}
+button:hover{border-color:var(--tx)}
+button.pri{background:var(--tx);color:#000;border-color:var(--tx)}
+button.pri:hover{background:var(--gold);border-color:var(--gold)}
+button.dng{color:var(--err)}
+button:disabled{opacity:.4;cursor:default}
+main{display:grid;grid-template-columns:1fr 360px;gap:0;min-height:calc(100vh - 62px)}
+@media(max-width:980px){main{grid-template-columns:1fr}}
+.cal{padding:24px 28px}
+.cal-h{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.cal-h b{font-size:18px;font-weight:400;letter-spacing:.14em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.dow{padding:8px;font-size:10px;letter-spacing:.2em;color:var(--mut);text-transform:uppercase;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.day{min-height:104px;padding:6px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);cursor:pointer;position:relative}
+.day:hover{background:#111}
+.day.out{opacity:.35}
+.day.today .n{color:var(--gold)}
+.day .n{font-size:11px;color:var(--mut)}
+.chip{display:flex;gap:5px;align-items:center;margin-top:4px;padding:3px 5px;border-left:2px solid var(--mut);background:#181818;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:pointer}
+.chip img{width:16px;height:16px;object-fit:cover;flex:none}
+.chip.scheduled{border-color:var(--warn)}.chip.published{border-color:var(--ok)}.chip.failed{border-color:var(--err)}.chip.manual{border-color:var(--gold)}
+aside{border-left:1px solid var(--line);padding:24px;background:var(--panel);overflow:auto;max-height:calc(100vh - 62px);position:sticky;top:62px}
+aside h2{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--mut);font-weight:500;margin:0 0 12px}
+.item{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.item img,.item .ph{width:46px;height:46px;object-fit:cover;background:#222;flex:none}
+.item small{color:var(--mut);display:block}
+.tag{display:inline-block;font-size:9px;letter-spacing:.14em;text-transform:uppercase;padding:2px 6px;border:1px solid currentColor}
+.tag.draft{color:var(--mut)}.tag.scheduled{color:var(--warn)}.tag.published{color:var(--ok)}.tag.failed{color:var(--err)}.tag.manual{color:var(--gold)}
+.nets{margin-top:20px;border-top:1px solid var(--line);padding-top:16px}
+.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:8px;background:var(--err)}.dot.on{background:var(--ok)}
+/* modal */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:flex-start;justify-content:center;overflow:auto;z-index:20;padding:30px 16px}
+.ov.open{display:flex}
+.mod{background:var(--panel);border:1px solid var(--line);width:min(1040px,100%);display:grid;grid-template-columns:1fr 340px}
+@media(max-width:860px){.mod{grid-template-columns:1fr}}
+.form{padding:24px;display:flex;flex-direction:column;gap:14px}
+label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:6px}
+input,textarea,select{width:100%;background:#0d0d0d;border:1px solid var(--line);color:var(--tx);padding:10px;font:inherit}
+textarea{min-height:130px;resize:vertical}
+input:focus,textarea:focus,select:focus{outline:none;border-color:var(--gold)}
+.cnt{font-size:11px;color:var(--mut);text-align:right}
+.nsel{display:flex;gap:8px;flex-wrap:wrap}
+.nsel label{display:flex;align-items:center;gap:7px;margin:0;border:1px solid var(--line);padding:8px 12px;cursor:pointer;color:var(--tx);letter-spacing:.1em}
+.nsel input{width:auto}
+.lib{max-height:240px;overflow:auto;border:1px solid var(--line);padding:8px;background:#0d0d0d}
+.lib details{margin-bottom:6px}
+.lib summary{cursor:pointer;font-size:11px;letter-spacing:.1em;color:var(--mut);padding:4px 0}
+.thumbs{display:flex;flex-wrap:wrap;gap:6px;padding:6px 0}
+.thumbs div{position:relative;width:62px;height:62px;cursor:pointer;border:2px solid transparent}
+.thumbs div.sel{border-color:var(--gold)}
+.thumbs img,.thumbs video{width:100%;height:100%;object-fit:cover}
+.thumbs i{position:absolute;top:0;left:0;background:var(--gold);color:#000;font:700 10px/1 sans-serif;padding:3px 5px;font-style:normal}
+.prev{background:#0d0d0d;border-left:1px solid var(--line);padding:24px}
+.ig{background:#000;border:1px solid var(--line);max-width:300px;margin:0 auto}
+.ig .h{display:flex;gap:8px;align-items:center;padding:8px;font-size:12px;font-weight:600}
+.ig .av{width:26px;height:26px;border-radius:50%;background:var(--gold);color:#000;display:grid;place-items:center;font-size:9px}
+.ig .im{aspect-ratio:1/1;background:#1a1a1a;display:grid;place-items:center;color:var(--mut);font-size:12px;overflow:hidden;position:relative}
+.ig.story .im{aspect-ratio:9/16}
+.ig .im img{width:100%;height:100%;object-fit:cover}
+.ig .im b{position:absolute;right:8px;top:8px;background:rgba(0,0,0,.6);padding:2px 7px;font-size:11px}
+.ig .c{padding:8px;font-size:12px;white-space:pre-wrap;word-break:break-word;max-height:150px;overflow:auto}
+.ig .c em{color:#7fb0e8;font-style:normal}
+.err{color:var(--err);font-size:12px}
+.acts{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:6px}
+.chip.publishing{border-color:var(--gold)}.tag.publishing{color:var(--gold)}
+@media(max-width:700px){header{padding:14px 16px;flex-wrap:wrap;gap:10px}.cal{padding:16px}.day{min-height:58px;padding:3px}.chip{font-size:0;padding:2px;gap:0}.chip img{width:100%;height:22px}aside{position:static;max-height:none;border-left:0;border-top:1px solid var(--line)}.form,.prev{padding:16px}button{padding:9px 11px}}
+#up{position:fixed;inset:auto 16px 16px auto;background:var(--panel);border:1px solid var(--line);padding:14px 18px;font-size:12px;display:none;z-index:40}
+#toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);background:var(--tx);color:#000;padding:10px 20px;font-size:12px;letter-spacing:.1em;display:none;z-index:50}
+</style>
+</head>
+<body>
+<header>
+  <h1>Real de Cote <span>/</span> Studio</h1>
+  <div class="row">
+    <button id="bUp" title="Sube las imágenes de un carrusel (JPG) en orden">Subir carrusel</button>
+    <input type="file" id="fUp" accept="image/jpeg,image/png,video/mp4" multiple hidden>
+    <button class="pri" id="bNew">+ Nueva</button>
+    <form method="post" action="/studio/logout" style="margin:0"><button title="Cerrar sesión">Salir</button></form>
+  </div>
+</header>
+<main>
+  <section class="cal">
+    <div class="cal-h">
+      <button id="prev">←</button><b id="mlabel"></b><button id="next">→</button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+  <aside>
+    <h2>Cola</h2>
+    <div id="queue"></div>
+    <div class="nets"><h2>Redes</h2><div id="nets"></div>
+      <p style="color:var(--mut);font-size:12px;margin-top:10px" id="netHelp"></p></div>
+  </aside>
+</main>
+
+<div class="ov" id="ov"><div class="mod">
+  <div class="form">
+    <div><label>Título interno</label><input id="title" placeholder="Ej. Carrusel Coupage"></div>
+    <div><label>Redes</label><div class="nsel" id="nsel"></div></div>
+    <div class="row"><div style="flex:1"><label>Formato</label><select id="type"><option value="post">Post / Carrusel</option><option value="story">Story</option></select></div>
+      <div style="flex:1.4"><label>Fecha y hora</label><input type="datetime-local" id="when"></div></div>
+    <div><label>Medios <span id="mcount"></span> — clic para elegir, el orden es el de selección</label><div class="lib" id="lib"></div></div>
+    <div><label>Texto</label><textarea id="caption" maxlength="2200"></textarea><div class="cnt"><span id="cc">0</span>/2200</div></div>
+    <div><label>Hashtags</label><input id="tags" placeholder="#RealDeCote #AOVE #OlivoOro"></div>
+    <div class="err" id="perr"></div>
+    <div class="acts">
+      <button class="dng" id="bDel">Eliminar</button>
+      <div class="row">
+        <button id="bClose">Cerrar</button>
+        <button id="bDraft">Borrador</button>
+        <button id="bSched">Programar</button>
+        <button class="pri" id="bNow">Publicar ahora</button>
+      </div>
+    </div>
+  </div>
+  <div class="prev"><label>Vista previa</label><div class="ig" id="ig"></div></div>
+</div></div>
+<div id="toast"></div>
+<div id="up"></div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const NETS = {instagram:'Instagram', facebook:'Facebook', tiktok:'TikTok', linkedin:'LinkedIn'};
+const STAT = {draft:'Borrador', scheduled:'Programado', publishing:'Publicando…', published:'Publicado', failed:'Error'};
+let S = {posts:[], media:[], networks:{}}, cur = null, sel = [], view = new Date();
+view.setDate(1);
+
+const api = async (u, m='GET', b, raw) => {
+  const r = await fetch('/studio' + u, {method:m, headers:{'Content-Type': raw ? raw.type : 'application/json', 'X-Studio':'1'}, body: raw ? raw.body : b && JSON.stringify(b)});
+  if(r.status===401){ location.reload(); throw new Error('Sesión caducada'); }
+  const j = await r.json().catch(()=>({})); if(!r.ok) throw new Error(j.error||('Error '+r.status)); return j;
+};
+const toast = (t) => { const e=$('#toast'); e.textContent=t; e.style.display='block'; clearTimeout(e._t); e._t=setTimeout(()=>e.style.display='none',2600); };
+const murl = (m) => '/studio/m/' + m;
+const isVid = (m) => /\.mp4$/i.test(m);
+const albums = () => S.media.reduce((a,m)=>((a[m.album] ||= []).push(m.file), a), {});
+const esc = (s) => String(s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = (iso) => iso ? new Date(iso).toLocaleString('es-ES',{day:'2-digit',month:'short',hour:'2-digit',minute:'2-digit'}) : 'Sin fecha';
+const toLocalInput = (iso) => { if(!iso) return ''; const d=new Date(iso); d.setMinutes(d.getMinutes()-d.getTimezoneOffset()); return d.toISOString().slice(0,16); };
+const thumb = (p) => p.media[0] ? (isVid(p.media[0]) ? '<div class="ph"></div>' : `<img src="${murl(p.media[0])}" loading="lazy">`) : '<div class="ph"></div>';
+
+async function load(){ S = await api('/api/state'); render(); }
+
+function render(){
+  const y=view.getFullYear(), m=view.getMonth();
+  $('#mlabel').textContent = view.toLocaleDateString('es-ES',{month:'long',year:'numeric'});
+  const first = (new Date(y,m,1).getDay()+6)%7, start = new Date(y,m,1-first), today = new Date().toDateString();
+  let h = ['L','M','X','J','V','S','D'].map(d=>`<div class="dow">${d}</div>`).join('');
+  for(let i=0;i<42;i++){
+    const d = new Date(start); d.setDate(start.getDate()+i);
+    const ps = S.posts.filter(p=>p.scheduledAt && new Date(p.scheduledAt).toDateString()===d.toDateString()).sort((a,b)=>a.scheduledAt.localeCompare(b.scheduledAt));
+    h += `<div class="day ${d.getMonth()!==m?'out':''} ${d.toDateString()===today?'today':''}" data-d="${d.toISOString()}"><span class="n">${d.getDate()}</span>`
+      + ps.map(p=>`<div class="chip ${p.status}" data-id="${p.id}">${p.media[0]&&!isVid(p.media[0])?`<img src="${murl(p.media[0])}">`:''}${new Date(p.scheduledAt).toTimeString().slice(0,5)} ${esc(p.title||p.caption.slice(0,24)||'Sin título')}</div>`).join('') + '</div>';
+  }
+  $('#grid').innerHTML = h;
+  const q = [...S.posts].sort((a,b)=>(a.scheduledAt||'9').localeCompare(b.scheduledAt||'9'));
+  $('#queue').innerHTML = q.length ? q.map(p=>`<div class="item" data-id="${p.id}">${thumb(p)}<div><b>${esc(p.title||p.caption.slice(0,30)||'Sin título')}</b>
+    <small>${fmt(p.scheduledAt)} · ${p.networks.map(n=>NETS[n]).join(', ')||'—'}</small><span class="tag ${p.status}">${STAT[p.status]}</span></div></div>`).join('')
+    : '<p style="color:var(--mut)">Aún no hay publicaciones. Sube un carrusel o crea una nueva.</p>';
+  $('#nets').innerHTML = Object.keys(NETS).map(n=>`<div><span class="dot ${S.networks[n]?'on':''}"></span>${NETS[n]}${S.networks[n]?'':(' <small style="color:var(--mut)">(sin configurar)</small>')}</div>`).join('');
+  $('#netHelp').textContent = Object.values(S.networks).some(Boolean) ? '' : 'Las redes se conectan con sus claves en el panel de Hostinger (variables de entorno).';
+}
+
+$('#grid').onclick = (e) => {
+  const c = e.target.closest('.chip'); if(c) return open(S.posts.find(p=>p.id===c.dataset.id));
+  const d = e.target.closest('.day'); if(d){ const x=new Date(d.dataset.d); x.setHours(10,0,0,0); open(null, x.toISOString()); }
+};
+$('#queue').onclick = (e) => { const i=e.target.closest('.item'); if(i) open(S.posts.find(p=>p.id===i.dataset.id)); };
+$('#prev').onclick = () => { view.setMonth(view.getMonth()-1); render(); };
+$('#next').onclick = () => { view.setMonth(view.getMonth()+1); render(); };
+$('#bNew').onclick = () => open(null);
+
+function open(p, when){
+  cur = p; sel = p ? [...p.media] : [];
+  $('#title').value = p?.title||''; $('#caption').value = p?.caption||''; $('#tags').value = p?.hashtags||'';
+  $('#type').value = p?.type||'post'; $('#when').value = toLocalInput(p?.scheduledAt || when);
+  $('#nsel').innerHTML = Object.keys(NETS).map(n=>`<label><input type="checkbox" value="${n}" ${(p?p.networks:['instagram']).includes(n)?'checked':''}>${NETS[n]}</label>`).join('');
+  $('#perr').textContent = p?.error || (p?.status==='published' ? 'Publicado ' + fmt(p.publishedAt) + '. Si lo guardas de nuevo, se volverá a publicar.' : '');
+  $('#bDel').style.display = p ? '' : 'none';
+  buildLib(); preview(); $('#ov').classList.add('open');
+}
+const close = () => $('#ov').classList.remove('open');
+$('#bClose').onclick = close;
+$('#ov').onmousedown = (e) => { if(e.target.id==='ov') close(); };
+
+function buildLib(){
+  $('#lib').innerHTML = Object.entries(albums()).reverse().map(([g,files])=>`<details ${files.some(f=>sel.includes(f))?'open':''}><summary>${esc(g)} (${files.length})</summary><div class="thumbs">`
+    + files.map(f=>`<div data-m="${esc(f)}" class="${sel.includes(f)?'sel':''}">${isVid(f)?`<video src="${murl(f)}" muted></video>`:`<img src="${murl(f)}" loading="lazy">`}${sel.includes(f)?`<i>${sel.indexOf(f)+1}</i>`:''}</div>`).join('') + '</div></details>').join('') || '<span style="color:var(--mut)">Aún no hay imágenes. Usa «Subir carrusel».</span>';
+  $('#mcount').textContent = sel.length ? `(${sel.length})` : '';
+}
+$('#lib').onclick = (e) => {
+  const t = e.target.closest('[data-m]'); if(!t) return;
+  const m = t.dataset.m, i = sel.indexOf(m);
+  if(i>=0) sel.splice(i,1); else if(sel.length<20) sel.push(m);
+  const open = [...document.querySelectorAll('#lib details')].map(d=>d.open);
+  buildLib(); document.querySelectorAll('#lib details').forEach((d,k)=>d.open=open[k]); preview();
+};
+function preview(){
+  const cap = $('#caption').value, tags = $('#tags').value;
+  $('#cc').textContent = cap.length;
+  $('#ig').className = 'ig ' + $('#type').value;
+  $('#ig').innerHTML = `<div class="h"><div class="av">RC</div>realdecote</div>
+    <div class="im">${sel[0]?(isVid(sel[0])?`<video src="${murl(sel[0])}" muted style="width:100%"></video>`:`<img src="${murl(sel[0])}">`):'Sin imagen'}${sel.length>1?`<b>1/${sel.length}</b>`:''}</div>
+    <div class="c"><b>realdecote</b> ${esc(cap)}${tags?`\n<em>${esc(tags)}</em>`:''}</div>`;
+}
+['caption','tags','type'].forEach(id=>$('#'+id).addEventListener('input',preview));
+
+function collect(schedule){
+  const when = $('#when').value;
+  if(schedule && !when) throw new Error('Elige fecha y hora para programar.');
+  const networks = [...document.querySelectorAll('#nsel input:checked')].map(i=>i.value);
+  if(schedule && !networks.length) throw new Error('Elige al menos una red.');
+  if(schedule && !sel.length) throw new Error('Elige al menos un medio.');
+  return {title:$('#title').value, caption:$('#caption').value, hashtags:$('#tags').value, type:$('#type').value, media:sel, networks, scheduledAt: schedule && when ? new Date(when).toISOString() : (when? new Date(when).toISOString(): null)};
+}
+async function persist(b){ return cur ? api('/api/posts/'+cur.id,'PUT',b) : api('/api/posts','POST',b); }
+const guard = (fn) => async () => { $('#perr').textContent=''; try{ await fn(); await load(); }catch(e){ $('#perr').textContent=e.message; } };
+$('#bDraft').onclick = guard(async()=>{ await persist({...collect(false), draft:true}); close(); toast('Guardado como borrador'); });
+$('#bSched').onclick = guard(async()=>{ await persist(collect(true)); close(); toast('Programado'); });
+$('#bNow').onclick = guard(async()=>{
+  const b = collect(true); b.scheduledAt = null;
+  if(!confirm('¿Publicar ahora en '+b.networks.map(n=>NETS[n]).join(', ')+'?')) return;
+  const p = await persist(b); const r = await api('/api/posts/'+p.id+'/publish','POST');
+  if(r.status==='published') toast('Publicado'); else throw new Error(r.error);
+  close();
+});
+$('#bDel').onclick = guard(async()=>{ if(!confirm('¿Eliminar esta publicación?')) return; await api('/api/posts/'+cur.id,'DELETE'); close(); toast('Eliminado'); });
+
+$('#bUp').onclick = () => $('#fUp').click();
+$('#fUp').onchange = async (e) => {
+  const files = [...e.target.files].sort((a,b)=>a.name.localeCompare(b.name,'es',{numeric:true})); e.target.value='';
+  if(!files.length) return;
+  const album = prompt('Nombre del carrusel (álbum):', 'Carrusel ' + new Date().toLocaleDateString('es-ES')); if(!album) return;
+  const box = $('#up'); box.style.display='block'; const done = [];
+  try {
+    for(const [k,f] of files.entries()){
+      box.textContent = `Subiendo ${k+1} de ${files.length}…`;
+      const m = await api(`/api/upload?album=${encodeURIComponent(album)}&name=${encodeURIComponent(f.name)}`,'POST',null,{type:f.type,body:f});
+      done.push(m.file);
+    }
+    await load();
+    if(confirm(`${done.length} archivos subidos a «${album}». ¿Crear una publicación con ellos?`)){ open(null); sel = done; $('#title').value = album; buildLib(); preview(); }
+  } catch(err){ alert('Error al subir: ' + err.message); }
+  finally { box.style.display='none'; }
+};
+load(); setInterval(load, 60000);
+</script>
+</body>
+</html>

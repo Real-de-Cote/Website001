@@ -51,7 +51,7 @@ function notFound(req, res) {
      or build tooling over HTTP (checked on the DECODED path, so
      /%74ools/… or /APP.JS cannot slip through).
 --------------------------------------------------------------------- */
-const PRIVATE = /^\/(?:app\.js|package(?:-lock)?\.json|README\.md|node_modules|emails|_src|tools)(?:\/|$)|\.(?:py|md|log|sh|ps1|bat|cmd)$/i;
+const PRIVATE = /^\/(?:app\.js|package(?:-lock)?\.json|README\.md|node_modules|emails|_src|_studio|tools)(?:\/|$)|\.(?:py|md|log|sh|ps1|bat|cmd)$/i;
 const UNSAFE = /[\0\\:~]|(?:^|\/)\.|[. ](?:\/|$)/; // NUL, \, :, ~, dot-segments/dotfiles, trailing . or space
 
 app.use(function guard(req, res, next) {
@@ -66,6 +66,9 @@ app.use(function guard(req, res, next) {
   if (PRIVATE.test(p)) return notFound(req, res);
   next();
 });
+
+// Studio: private social-media planner at /studio (off unless STUDIO_PASSWORD is set).
+app.use('/studio', require('./_studio/router')());
 
 /* ---------------------------------------------------------------------
    SMTP configuration (Hostinger).
